@@ -48,4 +48,20 @@ $$
 $$
 A possible route toward MLC is then to choose the relation $\sim_{\mathrm{comp}}$ so that one can prove a theorem of the following form: if the quotient space $\pi(\mathcal{M})$ and the fibers $\pi^{-1}(s)$, $s \in \pi(\mathcal{M})$, are locally connected, then $\mathcal{M}$ is locally connected. In this sense, the role of $\mathcal{S}$ is to encode a decomposition of $\mathcal{M}$ whose quotient geometry may control local connectivity of $\mathcal{M}$ itself.
 
-The given $\mathcal S$ can be associated with a simplicial complexes chain.
+To extract algebraic-topological data from $\mathcal{S}$, one may choose a simplicial complex $X_{\mathcal{S}}$ together with a continuous map
+$$
+\rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|,
+$$
+where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. This gives the diagram
+$$
+\begin{array}{ccc}
+\mathcal{M} & \xrightarrow{\pi} & \pi(\mathcal{M}) \\
+& \searrow_{\rho \circ \pi} & \downarrow{\scriptstyle \rho} \\
+& & |X_{\mathcal{S}}|,
+\end{array}
+$$
+and hence an induced simplicial chain complex
+$$
+C_\bullet(X_{\mathcal{S}})\colon \cdots \to C_2(X_{\mathcal{S}}) \xrightarrow{\partial_2} C_1(X_{\mathcal{S}}) \xrightarrow{\partial_1} C_0(X_{\mathcal{S}}) \to 0.
+$$
+Thus the role of $\mathcal{S}$ is not to determine a canonical chain complex by itself, but to provide a quotient space from which one may construct simplicial models and study their homological invariants.
