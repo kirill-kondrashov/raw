@@ -42,52 +42,34 @@ and
 $$
 \pi = q \circ \iota \colon \mathcal{M} \to \mathcal{S}.
 $$
-Then the following diagram commutes:
+Thus
 $$
-\begin{array}{ccc}
-\mathcal{M} & \xrightarrow{\iota} & \mathcal{K}(\mathcal{M}) \\
-{\scriptstyle \pi}\downarrow && \downarrow{\scriptstyle q} \\
-\mathcal{S} & = & \mathcal{S}.
-\end{array}
+\pi = q \circ \iota .
 $$
 
 Let $X_{\mathcal{S}}$ be a simplicial complex and let
 $$
 \rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|
 $$
-be a continuous map, where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. Then the following diagram commutes:
+be a continuous map, where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. Then
 $$
-\begin{array}{ccc}
-\mathcal{M} & \xrightarrow{\pi} & \pi(\mathcal{M}) \\
-& \searrow_{\rho \circ \pi} & \downarrow{\scriptstyle \rho} \\
-& & |X_{\mathcal{S}}|.
-\end{array}
+\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|
 $$
+is a continuous map.
 
 Let
 $$
-C_\bullet(X_{\mathcal{S}};\mathbb{Z})\colon
-\cdots \to C_2(X_{\mathcal{S}};\mathbb{Z})
-\xrightarrow{\partial_2}
-C_1(X_{\mathcal{S}};\mathbb{Z})
-\xrightarrow{\partial_1}
-C_0(X_{\mathcal{S}};\mathbb{Z})
-\to 0
+C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \colon \cdots \to C_2(X_{\mathcal{S}};\mathbb{Z}) \xrightarrow{\partial_2} C_1(X_{\mathcal{S}};\mathbb{Z}) \xrightarrow{\partial_1} C_0(X_{\mathcal{S}};\mathbb{Z}) \to 0
 $$
 denote the simplicial chain complex of $X_{\mathcal{S}}$ with integer coefficients.
 
 For an abelian group $A$, define
 $$
-C_\bullet(X_{\mathcal{S}};A)
-=
-C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \otimes_{\mathbb{Z}} A
+C_\bullet(X_{\mathcal{S}};A) = C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \otimes_{\mathbb{Z}} A
 $$
 and
 $$
-H_n(X_{\mathcal{S}};A)
-=
-H_n\bigl(C_\bullet(X_{\mathcal{S}};A)\bigr),
-\qquad n \ge 0.
+H_n(X_{\mathcal{S}};A) = H_n\bigl(C_\bullet(X_{\mathcal{S}};A)\bigr), \qquad n \ge 0.
 $$
 
 Let $H_n(\mathcal{M};A)$ denote the singular homology of $\mathcal{M}$ with coefficients in $A$. The continuous map $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ induces a homomorphism
