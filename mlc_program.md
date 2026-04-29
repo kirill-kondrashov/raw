@@ -33,5 +33,19 @@ $$
 
 __Remark__: the choice of $\sim_{\mathrm{comp}}$ is not canonical; it is only one topological/geometric formalization of the informal idea of "having the same disk-like outer approximants";
 
+The intended connection with MLC should be formulated through the quotient map
+$$
+q \colon \mathcal{K}(\mathcal{M}) \to \mathcal{S}
+= \mathcal{K}(\mathcal{M}) / \sim_{\mathrm{comp}}.
+$$
+If $\iota \colon \mathcal{M} \to \mathcal{K}(\mathcal{M})$ is the map $\iota(c) = \{c\}$, then $\pi = q \circ \iota$ fits into the diagram
+$$
+\begin{array}{ccc}
+\mathcal{M} & \xrightarrow{\iota} & \mathcal{K}(\mathcal{M}) \\
+{\scriptstyle \pi}\downarrow && \downarrow{\scriptstyle q} \\
+\pi(\mathcal{M}) & \hookrightarrow & \mathcal{S}.
+\end{array}
+$$
+A possible route toward MLC is then to choose the relation $\sim_{\mathrm{comp}}$ so that one can prove a theorem of the following form: if the quotient space $\pi(\mathcal{M})$ and the fibers $\pi^{-1}(s)$, $s \in \pi(\mathcal{M})$, are locally connected, then $\mathcal{M}$ is locally connected. In this sense, the role of $\mathcal{S}$ is to encode a decomposition of $\mathcal{M}$ whose quotient geometry may control local connectivity of $\mathcal{M}$ itself.
 
-The connection to MLC of the given $\mathcal S$ that can be defined in several ways, is that if all classes are locally connected, that means $\mathcal M$ is locally connected.
+The given $\mathcal S$ can be associated with a simplicial complexes chain.
