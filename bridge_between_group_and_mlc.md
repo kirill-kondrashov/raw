@@ -21,19 +21,17 @@ Define $\iota \colon \mathcal{M} \to \mathcal{K}(\mathcal{M})$ by $\iota(c) = \{
 
 Let $X_{\mathcal{S}}$ be a simplicial complex, and let $\rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|$ be a continuous map, where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. Then $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ is a continuous map.
 
-Let
+The simplicial chain complex of $X_{\mathcal{S}}$ with integer coefficients is:
 
 $$
 C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \colon \cdots \to C_2(X_{\mathcal{S}};\mathbb{Z}) \xrightarrow{\partial_2} C_1(X_{\mathcal{S}};\mathbb{Z}) \xrightarrow{\partial_1} C_0(X_{\mathcal{S}};\mathbb{Z}) \to 0
 $$
 
-denote the simplicial chain complex of $X_{\mathcal{S}}$ with integer coefficients.
-
 For an abelian group $A$, define $C_\bullet(X_{\mathcal{S}};A) = C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \otimes_{\mathbb{Z}} A$ and $H_n(X_{\mathcal{S}};A) = H_n\bigl(C_\bullet(X_{\mathcal{S}};A)\bigr)$ for $n \ge 0$.
 
 Let $H_n(\mathcal{M};A)$ denote the singular homology of $\mathcal{M}$ with coefficients in $A$. The continuous map $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ induces a homomorphism $(\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to H_n(X_{\mathcal{S}};A)$.
 
-If $G$ is a group and $n \ge 0$, any homomorphism $\Phi_n \colon H_n(X_{\mathcal{S}};A) \to G$ determines a composite homomorphism
+If $G$ is a group and $n \ge 0$, any homomorphism $\Phi_n \colon H_n(X_{\mathcal{S}};A) \to G$ determines a composite homomorphism:
 
 $$
 H_n(\mathcal{M};A) \xrightarrow{(\rho \circ \pi)_*} H_n(X_{\mathcal{S}};A) \xrightarrow{\Phi_n} G.
@@ -57,4 +55,12 @@ If one constructs the group $G$, then a possible relation to MLC would be to int
 
 ## Problem: formulation of MLC in terms of $G$
 
-A possible formulation is the following. An MLC-related statement involving $G$ can only be formulated after specifying a construction in which $G$ measures obstructions to local connectivity. In that case, the relevant sentence would have the form: if the obstruction classes $\mathrm{ob}_n(\xi)$ vanish for all $\xi$ in a specified family of homology classes, or equivalently if the canonical map $\Phi_n \circ (\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to G$ is trivial for the chosen degree $n$, then $\mathcal{M}$ is locally connected. Conversely, if $\mathcal{M}$ is not locally connected, one would expect this construction to produce a nonzero obstruction class $\mathrm{ob}_n(\xi)$ for some $\xi \in H_n(\mathcal{M};A)$. Thus $G$ would have to be defined so that vanishing of the relevant obstruction classes is equivalent, or at least closely related, to MLC.
+A possible formulation is the following. An MLC-related statement involving $G$ can only be formulated after specifying a construction in which $G$ measures obstructions to local connectivity. In that case, the relevant sentence would have the form: if the obstruction classes $\mathrm{ob}_n(\xi)$ vanish for all $\xi$ in a specified family of homology classes, or equivalently if the canonical map
+
+$$
+\Phi_n \circ (\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to G
+$$
+
+is trivial for the chosen degree $n$, then $\mathcal{M}$ is locally connected. Conversely, if $\mathcal{M}$ is not locally connected, one would expect this construction to produce a nonzero obstruction class $\mathrm{ob}_n(\xi)$ for some $\xi \in H_n(\mathcal{M};A)$.
+
+Thus $G$ would have to be defined so that vanishing of the relevant obstruction classes is equivalent, or at least closely related, to MLC.
