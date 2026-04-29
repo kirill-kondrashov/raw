@@ -29,7 +29,11 @@ $$
 
 For an abelian group $A$, define $C_\bullet(X_{\mathcal{S}};A) = C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \otimes_{\mathbb{Z}} A$ and $H_n(X_{\mathcal{S}};A) = H_n\bigl(C_\bullet(X_{\mathcal{S}};A)\bigr)$ for $n \ge 0$.
 
-Let $H_n(\mathcal{M};A)$ denote the singular homology of $\mathcal{M}$ with coefficients in $A$. The continuous map $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ induces a homomorphism $(\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to H_n(X_{\mathcal{S}};A)$.
+Let $H_n(\mathcal{M};A)$ denote the singular homology of $\mathcal{M}$ with coefficients in $A$. The continuous map $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ induces a homomorphism:
+
+$$
+(\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to H_n(X_{\mathcal{S}};A).
+$$
 
 If $G$ is a group and $n \ge 0$, any homomorphism $\Phi_n \colon H_n(X_{\mathcal{S}};A) \to G$ determines a composite homomorphism:
 
@@ -37,7 +41,13 @@ $$
 H_n(\mathcal{M};A) \xrightarrow{(\rho \circ \pi)_*} H_n(X_{\mathcal{S}};A) \xrightarrow{\Phi_n} G.
 $$
 
-For fixed $n$, $A$, $G$, $\rho$, and $\Phi_n$, define the obstruction homomorphism $\mathrm{ob}_n = \Phi_n \circ (\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to G$. For $\xi \in H_n(\mathcal{M};A)$, define the obstruction class of $\xi$ to be $\mathrm{ob}_n(\xi) \in G$. If a distinguished class $\xi \in H_n(\mathcal{M};A)$ has been specified, then $\mathrm{ob}_n(\xi)$ is called the distinguished obstruction class associated with the chosen data.
+For fixed $n$, $A$, $G$, $\rho$, and $\Phi_n$, define the obstruction homomorphism:
+
+$$
+\mathrm{ob}_n = \Phi_n \circ (\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to G.
+$$
+
+For $\xi \in H_n(\mathcal{M};A)$, define the obstruction class of $\xi$ to be $\mathrm{ob}_n(\xi) \in G$. If a distinguished class $\xi \in H_n(\mathcal{M};A)$ has been specified, then $\mathrm{ob}_n(\xi)$ is called the distinguished obstruction class associated with the chosen data.
 
 ## Remarks, motivation, and heuristic claims
 
