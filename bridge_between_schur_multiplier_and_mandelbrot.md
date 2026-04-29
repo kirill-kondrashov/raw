@@ -1,4 +1,4 @@
-## WIP
+## WIP: Bridge between Schur Multiplier and MLC
 
 The 5-term exact sequence in group homology provides the formal bridge between the Schur multiplier $M(G)$, the lower central series, and the simplicial lamination of the Mandelbrot set.
 
