@@ -1,23 +1,20 @@
-# Draft: MLC research program
+# MLC research program
 
-## Overall idea
+## Definitions related to the quotient space $\mathcal{S}$
 
-Let
+Let $\mathcal{M} \subset \mathbb{C}$ be the Mandelbrot set. Let $\mathcal{K}(\mathcal{M})$ denote the collection of nonempty compact subsets of $\mathcal{M}$. Let
+$$
+\mathcal{A} = \{K \subset \mathbb{C} : K \text{ is compact and } K \cong D^2\},
+$$
+where $D^2$ is the closed unit disk and $\cong$ denotes homeomorphism.
 
-- $\mathcal{M} \subset \mathbb{C}$ denote the Mandelbrot set;
-- $\mathcal{K}(\mathcal{M})$ denote the collection of nonempty compact subsets of $\mathcal{M}$;
-- $\mathcal{A}$ denote the collection of compact sets $K \subset \mathbb{C}$ such that $K$ is homeomorphic to the closed disk $D^2$.
-
-For $m \in \mathcal{K}(\mathcal{M})$ and $\varepsilon > 0$, define the set of $\varepsilon$-admissible outer approximants of $m$ by
-
+For $m \in \mathcal{K}(\mathcal{M})$ and $\varepsilon > 0$, define
 $$
 \mathcal{A}_\varepsilon(m) = \{K \in \mathcal{A} : m \subset K \text{ and } d_H(K,m) < \varepsilon\},
 $$
+where $d_H$ denotes the Hausdorff distance on nonempty compact subsets of $\mathbb{C}$.
 
-where $d_H$ is the Hausdorff distance on nonempty compact subsets of $\mathbb{C}$.
-
-This leads to one possible equivalence relation on $\mathcal{K}(\mathcal{M})$:
-
+Define a relation $\sim_{\mathrm{comp}}$ on $\mathcal{K}(\mathcal{M})$ by
 $$
 m_1 \sim_{\mathrm{comp}} m_2
 \quad\Longleftrightarrow\quad
@@ -25,43 +22,112 @@ m_1 \sim_{\mathrm{comp}} m_2
 \text{ for every } \varepsilon > 0.
 $$
 
-Since equality of the families $\mathcal{A}_\varepsilon(m)$ is reflexive, symmetric, and transitive, the relation $\sim_{\mathrm{comp}}$ is an equivalence relation. We may therefore define
-
+Define
 $$
-\mathcal{S} = \mathcal{K}(\mathcal{M}) / \sim_{\mathrm{comp}},
+\mathcal{S} = \mathcal{K}(\mathcal{M})/\sim_{\mathrm{comp}}
 $$
-
-__Remark__: the choice of $\sim_{\mathrm{comp}}$ is not canonical; it is only one topological/geometric formalization of the informal idea of "having the same disk-like outer approximants";
-
-The intended connection with MLC should be formulated through the quotient map
+and let
 $$
 q \colon \mathcal{K}(\mathcal{M}) \to \mathcal{S}
-= \mathcal{K}(\mathcal{M}) / \sim_{\mathrm{comp}}.
 $$
-If $\iota \colon \mathcal{M} \to \mathcal{K}(\mathcal{M})$ is the map $\iota(c) = \{c\}$, then $\pi = q \circ \iota$ fits into the diagram
+denote the quotient map.
+
+Define
+$$
+\iota \colon \mathcal{M} \to \mathcal{K}(\mathcal{M}),
+\qquad
+\iota(c) = \{c\},
+$$
+and
+$$
+\pi = q \circ \iota \colon \mathcal{M} \to \mathcal{S}.
+$$
+Then the following diagram commutes:
 $$
 \begin{array}{ccc}
 \mathcal{M} & \xrightarrow{\iota} & \mathcal{K}(\mathcal{M}) \\
 {\scriptstyle \pi}\downarrow && \downarrow{\scriptstyle q} \\
-\pi(\mathcal{M}) & \hookrightarrow & \mathcal{S}.
+\mathcal{S} & = & \mathcal{S}.
 \end{array}
 $$
-A possible route toward MLC is then to choose the relation $\sim_{\mathrm{comp}}$ so that one can prove a theorem of the following form: if the quotient space $\pi(\mathcal{M})$ and the fibers $\pi^{-1}(s)$, $s \in \pi(\mathcal{M})$, are locally connected, then $\mathcal{M}$ is locally connected. In this sense, the role of $\mathcal{S}$ is to encode a decomposition of $\mathcal{M}$ whose quotient geometry may control local connectivity of $\mathcal{M}$ itself.
 
-To extract algebraic-topological data from $\mathcal{S}$, one may choose a simplicial complex $X_{\mathcal{S}}$ together with a continuous map
+Let $X_{\mathcal{S}}$ be a simplicial complex and let
 $$
-\rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|,
+\rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|
 $$
-where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. This gives the diagram
+be a continuous map, where $|X_{\mathcal{S}}|$ denotes the geometric realization of $X_{\mathcal{S}}$. Then the following diagram commutes:
 $$
 \begin{array}{ccc}
 \mathcal{M} & \xrightarrow{\pi} & \pi(\mathcal{M}) \\
 & \searrow_{\rho \circ \pi} & \downarrow{\scriptstyle \rho} \\
-& & |X_{\mathcal{S}}|,
+& & |X_{\mathcal{S}}|.
 \end{array}
 $$
-and hence an induced simplicial chain complex
+
+Let
 $$
-C_\bullet(X_{\mathcal{S}})\colon \cdots \to C_2(X_{\mathcal{S}}) \xrightarrow{\partial_2} C_1(X_{\mathcal{S}}) \xrightarrow{\partial_1} C_0(X_{\mathcal{S}}) \to 0.
+C_\bullet(X_{\mathcal{S}};\mathbb{Z})\colon
+\cdots \to C_2(X_{\mathcal{S}};\mathbb{Z})
+\xrightarrow{\partial_2}
+C_1(X_{\mathcal{S}};\mathbb{Z})
+\xrightarrow{\partial_1}
+C_0(X_{\mathcal{S}};\mathbb{Z})
+\to 0
 $$
-Thus the role of $\mathcal{S}$ is not to determine a canonical chain complex by itself, but to provide a quotient space from which one may construct simplicial models and study their homological invariants.
+denote the simplicial chain complex of $X_{\mathcal{S}}$ with integer coefficients.
+
+For an abelian group $A$, define
+$$
+C_\bullet(X_{\mathcal{S}};A)
+=
+C_\bullet(X_{\mathcal{S}};\mathbb{Z}) \otimes_{\mathbb{Z}} A
+$$
+and
+$$
+H_n(X_{\mathcal{S}};A)
+=
+H_n\bigl(C_\bullet(X_{\mathcal{S}};A)\bigr),
+\qquad n \ge 0.
+$$
+
+Let $H_n(\mathcal{M};A)$ denote the singular homology of $\mathcal{M}$ with coefficients in $A$. The continuous map $\rho \circ \pi \colon \mathcal{M} \to |X_{\mathcal{S}}|$ induces a homomorphism
+$$
+(\rho \circ \pi)_* \colon H_n(\mathcal{M};A) \to H_n(X_{\mathcal{S}};A).
+$$
+
+If $G$ is a group and $n \ge 0$, any homomorphism
+$$
+\Phi_n \colon H_n(X_{\mathcal{S}};A) \to G
+$$
+determines a composite homomorphism
+$$
+H_n(\mathcal{M};A)
+\xrightarrow{(\rho \circ \pi)_*}
+H_n(X_{\mathcal{S}};A)
+\xrightarrow{\Phi_n}
+G.
+$$
+
+## Remarks, motivation, and heuristic claims
+
+The relation $\sim_{\mathrm{comp}}$ is not intended to be canonical. It is a candidate formalization of the heuristic idea that two compact subsets of $\mathcal{M}$ should be regarded as equivalent when they admit the same disk-like outer approximants at every scale.
+
+The motivation for introducing the quotient space $\mathcal{S}$ is that the map
+$$
+\pi \colon \mathcal{M} \to \mathcal{S}
+$$
+packages points of $\mathcal{M}$ into equivalence classes determined by the chosen approximation theory. One may then ask whether geometric or topological properties of $\pi(\mathcal{M}) \subseteq \mathcal{S}$ and of the fibers $\pi^{-1}(s)$ influence corresponding properties of $\mathcal{M}$.
+
+Heuristically, one possible MLC-oriented program is to choose the relation $\sim_{\mathrm{comp}}$ so that local connectivity of the quotient object $\pi(\mathcal{M})$, together with suitable regularity of the fibers of $\pi$, constrains or reflects local connectivity of $\mathcal{M}$.
+
+Likewise, the simplicial complex $X_{\mathcal{S}}$ and the map
+$$
+\rho \colon \pi(\mathcal{M}) \to |X_{\mathcal{S}}|
+$$
+are auxiliary choices rather than canonical constructions. Their purpose is to replace the quotient geometry by combinatorial models whose homology groups may be easier to analyze.
+
+The final passage from homology groups to a group $G$ through a homomorphism
+$$
+\Phi_n \colon H_n(X_{\mathcal{S}};A) \to G
+$$
+should therefore be understood as extra structure imposed for a specific application, rather than data determined uniquely by $\mathcal{M}$.
