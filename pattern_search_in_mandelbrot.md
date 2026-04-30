@@ -45,7 +45,7 @@ $$
 U + r_0 \overline{\mathbb{D}} \subset B,
 $$
 
-where $\mathbb{D} = \{z \in \mathbb{C} : |z| < 1\}$. Let
+where $\mathbb{D} = \lbrace z \in \mathbb{C} : |z| < 1 \rbrace$. Let
 
 $$
 \lambda = \frac{1+\sqrt{5}}{2},
@@ -54,56 +54,58 @@ r_n = r_0 \lambda^{-2n},
 \qquad 0 \leq n \leq m.
 $$
 
-Let $\widehat{I}_N \colon B \to \{0,1\}$ be the piecewise-constant extension of $I_N$, and define
+Let $\widehat{I}_N \colon B \to \lbrace 0,1 \rbrace$ be the piecewise-constant extension of $I_N$, and define
 
 $$
+\begin{aligned}
 \delta_N(z)
-=
-\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr)
--
-\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr),
+&= \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) \\
+&\quad - \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr),
 \qquad z \in B.
+\end{aligned}
 $$
 
 For $x \in U$ and $0 \leq n \leq m$, define
 
 $$
+\begin{aligned}
 f_{N,x,n}(u)
-=
-r_n^{-1}\delta_N(x+r_n u),
+&= r_n^{-1}\delta_N(x+r_n u),
 \qquad
 u \in \overline{\mathbb{D}}.
+\end{aligned}
 $$
 
 For $1 \leq n \leq m$, define
 
 $$
+\begin{aligned}
 E_{N,n}(x)
-=
-\inf_{\theta \in [0,2\pi)}
-\left\|
-f_{N,x,n}
--
-f_{N,x,0}(e^{i\theta}\,\cdot)
-\right\|_{L^2(\overline{\mathbb{D}})}.
+&= \inf_{\theta \in [0,2\pi)}
+\bigl\lVert
+f_{N,x,n} - f_{N,x,0}(e^{i\theta}\,\cdot)
+\bigr\rVert_{L^2(\overline{\mathbb{D}})}.
+\end{aligned}
 $$
 
 Define the golden-scale self-similarity functional
 
 $$
+\begin{aligned}
 S_{N,m}(x)
-=
-\sum_{n=1}^m 2^{-n} E_{N,n}(x),
+&= \sum_{n=1}^m 2^{-n} E_{N,n}(x),
 \qquad x \in U.
+\end{aligned}
 $$
 
 Define the candidate set
 
 $$
+\begin{aligned}
 \mathcal{C}_{N,m,\tau}
-=
-\{x \in U : S_{N,m}(x) \leq \tau\},
+&= \lbrace x \in U : S_{N,m}(x) \leq \tau \rbrace,
 \qquad \tau > 0,
+\end{aligned}
 $$
 
 and define
@@ -208,7 +210,7 @@ where $\Gamma_N$ is the sampling grid. The following candidates were found.
 For
 
 $$
-\alpha \in \left\{ 1+\sqrt{2}, \frac{3+\sqrt{13}}{2}, 2+\sqrt{5}, [1,2,1,2,\ldots] \right\},
+\alpha \in \lbrace 1+\sqrt{2}, \frac{3+\sqrt{13}}{2}, 2+\sqrt{5}, [1,2,1,2,\ldots] \rbrace,
 $$
 
 the minimum value among the tested ratios was attained at
@@ -275,7 +277,7 @@ $$
 For the coarse interval scan
 
 $$
-\alpha \in \{1.25, 1.35, 1.50, 1.75, 2.00, 2.50, 3.00, 4.00\},
+\alpha \in \lbrace 1.25, 1.35, 1.50, 1.75, 2.00, 2.50, 3.00, 4.00 \rbrace,
 $$
 
 the smallest value was attained at
