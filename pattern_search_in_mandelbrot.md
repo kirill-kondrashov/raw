@@ -36,3 +36,80 @@ Second, there are computer-assisted search procedures implemented in fractal-exp
 Third, one finds experimental and machine-learning work on fractal images more generally, including clustering, classification, and synthetic-dataset constructions. However, a systematic literature devoted specifically to detecting mathematically meaningful Mandelbrot patterns from finite-resolution images by image-processing methods appears to be sparse.
 
 Accordingly, the problem formulated above seems to remain largely open in its purely image-based form: the closest existing work is either rigorous renormalization theory or software-assisted dynamical search, rather than a developed theory of pattern detection from the pixel approximations $(I_N)_{N \geq 1}$ alone.
+
+## The golden-scale self-similarity functional
+
+Fix a compact set $U \subset B$, an integer $m \geq 1$, and a number $r_0 > 0$ such that
+
+$$
+U + r_0 \overline{\mathbb{D}} \subset B,
+$$
+
+where $\mathbb{D} = \{z \in \mathbb{C} : |z| < 1\}$. Let
+
+$$
+\lambda = \frac{1+\sqrt{5}}{2},
+\qquad
+r_n = r_0 \lambda^{-2n},
+\qquad 0 \leq n \leq m.
+$$
+
+Let $\widehat{I}_N \colon B \to \{0,1\}$ be the piecewise-constant extension of $I_N$, and define
+
+$$
+\delta_N(z)
+=
+\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr)
+-
+\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr),
+\qquad z \in B.
+$$
+
+For $x \in U$ and $0 \leq n \leq m$, define
+
+$$
+f_{N,x,n}(u)
+=
+r_n^{-1}\delta_N(x+r_n u),
+\qquad
+u \in \overline{\mathbb{D}}.
+$$
+
+For $1 \leq n \leq m$, define
+
+$$
+E_{N,n}(x)
+=
+\inf_{\theta \in [0,2\pi)}
+\left\|
+f_{N,x,n}
+-
+f_{N,x,0}(e^{i\theta}\,\cdot)
+\right\|_{L^2(\overline{\mathbb{D}})}.
+$$
+
+Define the golden-scale self-similarity functional
+
+$$
+S_{N,m}(x)
+=
+\sum_{n=1}^m 2^{-n} E_{N,n}(x),
+\qquad x \in U.
+$$
+
+Define the candidate set
+
+$$
+\mathcal{C}_{N,m,\tau}
+=
+\{x \in U : S_{N,m}(x) \leq \tau\},
+\qquad \tau > 0,
+$$
+
+and define
+
+$$
+x_{N,m} \in \operatorname*{argmin}_{x \in U \cap \Gamma_N} S_{N,m}(x),
+$$
+
+where $\Gamma_N$ is the sampling grid of $I_N$. The points of $\mathcal{C}_{N,m,\tau}$, or equivalently the minimizers of $S_{N,m}$ on $U \cap \Gamma_N$, are the outputs of the search procedure.
