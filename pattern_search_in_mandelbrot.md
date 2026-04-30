@@ -165,6 +165,121 @@ $$
 
 Their visual similarity is the experimental signal that the functional is designed to detect. In the current notebook this is only a finite-resolution visual and numerical proxy for the theoretical pattern.
 
+## Current non-golden candidates found experimentally
+
+In the executed notebook search over alternative ratios, the numerical parameters were fixed as follows:
+
+$$
+B = [-1.6,0.4] \times [-0.9,0.9],
+\qquad
+U = [-1.05,-0.55] \times [-0.35,0.35],
+$$
+
+$$
+N = 320,
+\qquad
+m = 3,
+\qquad
+r_0 = 0.18,
+$$
+
+with the functional
+
+$$
+S_{N,m}^{(\alpha)}(x)
+$$
+
+defined by the rule
+
+$$
+r_n = r_0 \alpha^{-2n}.
+$$
+
+For each tested ratio $\alpha$, let
+
+$$
+x^*(\alpha) \in \operatorname*{argmin}_{x \in U \cap \Gamma_N} S_{N,m}^{(\alpha)}(x),
+$$
+
+where $\Gamma_N$ is the sampling grid. The following candidates were found.
+
+1. **Family 1**  
+   For
+   $$
+   \alpha \in \left\{ 1+\sqrt{2}, \frac{3+\sqrt{13}}{2}, 2+\sqrt{5}, [1,2,1,2,\ldots] \right\},
+   $$
+   the minimum value among the tested ratios was attained at
+   $$
+   \alpha = [1,2,1,2,\ldots] = \frac{1+\sqrt{3}}{2} \approx 1.366025,
+   $$
+   with
+   $$
+   x^*(\alpha) = (-0.8,0),
+   \qquad
+   S_{N,m}^{(\alpha)}(x^*(\alpha)) \approx 0.032690.
+   $$
+
+2. **Family 2**  
+   For the metallic means
+   $$
+   \sigma_k = \frac{k+\sqrt{k^2+4}}{2},
+   \qquad 2 \leq k \leq 6,
+   $$
+   the smallest value was attained at
+   $$
+   \sigma_2 = 1+\sqrt{2} \approx 2.414214,
+   $$
+   with
+   $$
+   x^*(\sigma_2) = (-0.8,0),
+   \qquad
+   S_{N,m}^{(\sigma_2)}(x^*(\sigma_2)) \approx 0.042416.
+   $$
+
+3. **Family 3**  
+   For the tested periodic continued fractions
+   $$
+   [1,2,1,2,\ldots], \quad [1,3,1,3,\ldots], \quad [2,3,2,3,\ldots], \quad [1,1,2,1,1,2,\ldots], \quad [2,2,1,2,2,1,\ldots],
+   $$
+   the smallest value was attained at
+   $$
+   \alpha = [1,3,1,3,\ldots] = \frac{1+\sqrt{13}}{2} \approx 1.263763,
+   $$
+   with
+   $$
+   x^*(\alpha) = (-0.8,0),
+   \qquad
+   S_{N,m}^{(\alpha)}(x^*(\alpha)) \approx 0.029201.
+   $$
+
+4. **Family 4**  
+   For the coarse interval scan
+   $$
+   \alpha \in \{1.25, 1.35, 1.50, 1.75, 2.00, 2.50, 3.00, 4.00\},
+   $$
+   the smallest value was attained at
+   $$
+   \alpha = 1.25,
+   $$
+   with
+   $$
+   x^*(1.25) = (-0.8,0),
+   \qquad
+   S_{N,m}^{(1.25)}(x^*(1.25)) \approx 0.028634.
+   $$
+
+Thus, among all ratios tested so far in the non-golden notebook, the smallest observed value was
+
+$$
+S_{N,m}^{(1.25)}((-0.8,0)) \approx 0.028634.
+$$
+
+In all four tested families, the best candidate lies on the real axis, and in three of the four families the minimizing sampled point is exactly
+
+$$
+(-0.8,0).
+$$
+
 ## Next step: search for other scaling ratios
 
 A natural next step is to replace the golden scaling law by a more general one
