@@ -39,16 +39,19 @@ jobs:
           uv venv .venv
           uv pip install --python .venv/bin/python jupyter nbconvert nbclient numpy scipy matplotlib
 
-      - name: Execute notebook
+      - name: Execute notebooks
         run: |
           . .venv/bin/activate
           mkdir -p executed-notebooks
-          jupyter nbconvert \
-            --to notebook \
-            --execute notebooks/golden_scale_self_similarity.ipynb \
-            --output golden_scale_self_similarity.executed.ipynb \
-            --output-dir executed-notebooks \
-            --ExecutePreprocessor.timeout=900
+          for notebook in notebooks/*.ipynb; do
+            base="$(basename "$notebook" .ipynb)"
+            jupyter nbconvert \
+              --to notebook \
+              --execute "$notebook" \
+              --output "${base}.executed.ipynb" \
+              --output-dir executed-notebooks \
+              --ExecutePreprocessor.timeout=900
+          done
 
       - name: Upload executed notebook
         uses: actions/upload-artifact@v4
