@@ -90,7 +90,7 @@ $$
 x_{N,m} \in \mathop{\mathrm{argmin}}\limits_{x \in U \cap \Gamma_N} S_{N,m}(x),
 $$
 
-where $\Gamma_N$ is the sampling grid of $I_N$. The points of $\mathcal{C}_{N,m,\tau}$, or equivalently the minimizers of $S_{N,m}$ on $U \cap \Gamma_N$, are the outputs of the search procedure.
+where $\Gamma_N$ is the sampling grid of $I_N$. The points in this candidate set, or equivalently the minimizers of the functional on $U \cap \Gamma_N$, are the outputs of the search procedure.
 
 ## Experimental golden-scale search
 
