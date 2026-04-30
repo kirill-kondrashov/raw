@@ -39,13 +39,13 @@ Accordingly, the problem formulated above seems to remain largely open in its pu
 
 ## The golden-scale self-similarity functional
 
-Fix a compact set $U \subset B$, an integer $m \geq 1$, and a number $r_0 > 0$ such that
+Fix a compact set $U \subset B$, an integer $m \geq 1$, and a number $r_0 \gt 0$ such that
 
 $$
 U + r_0 \overline{\mathbb{D}} \subset B,
 $$
 
-where $\mathbb{D} = \lbrace z \in \mathbb{C} : |z| < 1 \rbrace$. Let
+where $\mathbb{D} = \lbrace z \in \mathbb{C} : |z| \lt 1 \rbrace$. Let
 
 $$
 \lambda = \frac{1+\sqrt{5}}{2},
@@ -57,61 +57,37 @@ $$
 Let $\widehat{I}_N \colon B \to \lbrace 0,1 \rbrace$ be the piecewise-constant extension of $I_N$, and define
 
 $$
-\begin{aligned}
-\delta_N(z)
-&= \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) \\
-&\quad - \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr),
-\qquad z \in B.
-\end{aligned}
+\delta_N(z) = \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) - \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr), \qquad z \in B.
 $$
 
 For $x \in U$ and $0 \leq n \leq m$, define
 
 $$
-\begin{aligned}
-f_{N,x,n}(u)
-&= r_n^{-1}\delta_N(x+r_n u),
-\qquad
-u \in \overline{\mathbb{D}}.
-\end{aligned}
+f_{N,x,n}(u) = r_n^{-1}\delta_N(x+r_n u), \qquad u \in \overline{\mathbb{D}}.
 $$
 
 For $1 \leq n \leq m$, define
 
 $$
-\begin{aligned}
-E_{N,n}(x)
-&= \inf_{\theta \in [0,2\pi)}
-\bigl\lVert
-f_{N,x,n} - f_{N,x,0}(e^{i\theta}\,\cdot)
-\bigr\rVert_{L^2(\overline{\mathbb{D}})}.
-\end{aligned}
+E_{N,n}(x) = \inf_{\theta \in [0,2\pi)} \bigl\lVert f_{N,x,n} - f_{N,x,0}(e^{i\theta}\cdot) \bigr\rVert_{L^2(\overline{\mathbb{D}})}.
 $$
 
 Define the golden-scale self-similarity functional
 
 $$
-\begin{aligned}
-S_{N,m}(x)
-&= \sum_{n=1}^m 2^{-n} E_{N,n}(x),
-\qquad x \in U.
-\end{aligned}
+S_{N,m}(x) = \sum_{n=1}^m 2^{-n} E_{N,n}(x), \qquad x \in U.
 $$
 
 Define the candidate set
 
 $$
-\begin{aligned}
-\mathcal{C}_{N,m,\tau}
-&= \lbrace x \in U : S_{N,m}(x) \leq \tau \rbrace,
-\qquad \tau > 0,
-\end{aligned}
+\mathcal{C}_{N,m,\tau} = \lbrace x \in U : S_{N,m}(x) \leq \tau \rbrace, \qquad \tau \gt 0,
 $$
 
 and define
 
 $$
-x_{N,m} \in \mathop{\mathrm{arg\,min}}\limits_{x \in U \cap \Gamma_N} S_{N,m}(x),
+x_{N,m} \in \mathop{\mathrm{argmin}}\limits_{x \in U \cap \Gamma_N} S_{N,m}(x),
 $$
 
 where $\Gamma_N$ is the sampling grid of $I_N$. The points of $\mathcal{C}_{N,m,\tau}$, or equivalently the minimizers of $S_{N,m}$ on $U \cap \Gamma_N$, are the outputs of the search procedure.
@@ -200,7 +176,7 @@ $$
 For each tested ratio $\alpha$, let
 
 $$
-x^{\ast}(\alpha) \in \mathop{\mathrm{arg\,min}}\limits_{x \in U \cap \Gamma_N} S_{N,m}^{(\alpha)}(x),
+x^{\ast}(\alpha) \in \mathop{\mathrm{argmin}}\limits_{x \in U \cap \Gamma_N} S_{N,m}^{(\alpha)}(x),
 $$
 
 where $\Gamma_N$ is the sampling grid. The following candidates were found.
@@ -312,7 +288,7 @@ A natural next step is to replace the golden scaling law by a more general one
 
 $$
 r_n = r_0 \alpha^{-2n},
-\qquad \alpha > 1,
+\qquad \alpha \gt 1,
 $$
 
 and define the corresponding family of functionals
