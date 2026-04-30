@@ -28,11 +28,19 @@ $$
 
 On the chosen finite grid, the detected candidate set is finite; in the grid-based formulation over all finite sampling grids, the union of such candidate sets is at most countable.
 
+At present, this experiment is only **qualitatively** consistent with the Dudko-style theory: it does find low-score multiscale candidates near the main cardioid, so the functional is detecting the kind of self-similarity it was designed to measure. However, it does **not** yet test the specific theoretical prediction at the \((\)anti-\()\)golden mean point, nor does it verify the scaling law
+
+$$
+r_n \asymp \lambda^{-2n}
+$$
+
+in any rigorous or high-precision sense. It should therefore be interpreted as a proof of concept for the detection functional, not as a confirmation of the full theory.
+
 ### Search window, sampled local minima, and score field
 
 ![Golden-scale search window and score field](./notebooks/images/golden_scale_self_similarity_1.png)
 
-The left panel shows the search window together with all sampled local minima and the best candidate. The right panel shows the corresponding score field $S_{N,m}$ on the search grid.
+The left panel shows the search window together with all sampled local minima and the best candidate. The right panel shows the corresponding score field $S_{N,m}$ on the search grid. The presence of several low-score points is qualitatively compatible with the expectation that self-similar loci occur near the main cardioid, but this picture alone does not identify the Dudko point or establish the predicted asymptotic scaling.
 
 ### Normalized patches across golden scales
 
@@ -46,4 +54,4 @@ r_n = r_0 \lambda^{-2n},
 n = 0,1,2,3.
 $$
 
-Their visual similarity is the experimental signal that the functional is designed to detect.
+Their visual similarity is the experimental signal that the functional is designed to detect. In the current notebook this is only a finite-resolution visual and numerical proxy for the theoretical pattern.

@@ -8105,6 +8105,7 @@ $$
 r_n = r_0 \lambda^{-2n}, \qquad n=1,2,3.
 $$
 All optimal angles are $0$ in this coarse experiment, so the best match occurs without an additional rotation among the sampled angles. The errors increase slightly with $n$, which is consistent with the fact that smaller scales are harder to resolve accurately on a finite grid.</p>
+<p>This is only a qualitative agreement with the Dudko-style theory. The computation does detect low-score multiscale candidates near the main cardioid, so it is measuring the intended kind of self-similarity. However, it does not yet isolate the specific (()anti-())golden mean point, and it does not verify the theoretical scaling law in a rigorous or high-precision sense.</p>
 <p>The notebook also enumerates all sampled local minima of the score field on the finite grid $U \cap \Gamma_N$. This set is finite because the grid itself is finite. In a grid-based theory with candidate sets taken over the countable family of finite grids $(\Gamma_N)_{N \geq 1}$, the union of all sampled candidate sets is therefore at most countable.</p>
 </div>
 </div>
@@ -8244,7 +8245,7 @@ All optimal angles are $0$ in this coarse experiment, so the best match occurs w
 <li>The second panel shows the scalar field $S_{N,m}$ on the search grid. Darker regions correspond to smaller values of the functional, hence to stronger multiscale self-similarity relative to the prescribed golden scaling. The overlaid red points are exactly the sampled local minima displayed in the previous cell.</li>
 <li>The final row of panels shows the normalized patches $f_{N,x_{N,m},n}$ for $n=0,1,2,3$. Their visual resemblance is the geometric content captured by the functional: the closer these patches are after rescaling, the smaller the value of $S_{N,m}$.</li>
 </ol>
-<p>In the present experiment the minimum is attained on the real axis near the center of the search window, and the normalized patches remain visibly similar across the first few golden scales.</p>
+<p>In the present experiment the minimum is attained on the real axis near the center of the search window, and the normalized patches remain visibly similar across the first few golden scales. This is best regarded as a proof of concept for the functional rather than as a confirmation of the full Dudko prediction.</p>
 </div>
 </div>
 </div>
