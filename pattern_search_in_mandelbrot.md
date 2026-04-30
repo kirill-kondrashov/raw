@@ -113,3 +113,86 @@ x_{N,m} \in \operatorname*{argmin}_{x \in U \cap \Gamma_N} S_{N,m}(x),
 $$
 
 where $\Gamma_N$ is the sampling grid of $I_N$. The points of $\mathcal{C}_{N,m,\tau}$, or equivalently the minimizers of $S_{N,m}$ on $U \cap \Gamma_N$, are the outputs of the search procedure.
+
+## Experimental golden-scale search
+
+The notebook [./notebooks/golden_scale_self_similarity.ipynb](./notebooks/golden_scale_self_similarity.ipynb) implements a discrete version of the golden-scale self-similarity functional. In the current experiment it:
+
+1. samples a binary image of the Mandelbrot set on a finite grid;
+2. constructs the associated signed distance field;
+3. evaluates the score $S_{N,m}$ on a search window near the main cardioid;
+4. lists all sampled local minima of the score on that finite grid.
+
+In the current run, the best sampled candidate is near
+
+$$
+c = -0.8,
+$$
+
+with score approximately
+
+$$
+S_{N,m} \approx 0.037588.
+$$
+
+On the chosen finite grid, the detected candidate set is finite. In the grid-based formulation over the countable family of finite sampling grids $(\Gamma_N)_{N \geq 1}$, the union of all sampled candidate sets is therefore at most countable.
+
+At present, this experiment is only qualitatively consistent with the Dudko-style theory: it does find low-score multiscale candidates near the main cardioid, so the functional is detecting the intended kind of self-similarity. However, it does not yet isolate the specific \((\)anti-\()\)golden mean point, nor does it verify the scaling law
+
+$$
+r_n \asymp \lambda^{-2n}
+$$
+
+in any rigorous or high-precision sense. It should therefore be interpreted as a proof of concept for the detection functional, not as a confirmation of the full theory.
+
+### Search window, sampled local minima, and score field
+
+![Golden-scale search window and score field](./notebooks/images/golden_scale_self_similarity_1.png)
+
+The left panel shows the search window together with all sampled local minima and the best candidate. The right panel shows the corresponding score field $S_{N,m}$ on the search grid. The presence of several low-score points is qualitatively compatible with the expectation that self-similar loci occur near the main cardioid, but this picture alone does not identify the Dudko point or establish the predicted asymptotic scaling.
+
+### Normalized patches across golden scales
+
+![Golden-scale normalized patches](./notebooks/images/golden_scale_self_similarity_2.png)
+
+These patches are the normalized fields $f_{N,x,n}$ at scales
+
+$$
+r_n = r_0 \lambda^{-2n},
+\qquad
+n = 0,1,2,3.
+$$
+
+Their visual similarity is the experimental signal that the functional is designed to detect. In the current notebook this is only a finite-resolution visual and numerical proxy for the theoretical pattern.
+
+## Next step: search for other scaling ratios
+
+A natural next step is to replace the golden scaling law by a more general one
+
+$$
+r_n = r_0 \alpha^{-2n},
+\qquad \alpha > 1,
+$$
+
+and define the corresponding family of functionals
+
+$$
+S_{N,m}^{(\alpha)}(x).
+$$
+
+One may then search either over a finite set of prescribed values of $\alpha$ or over a discretized interval of possible ratios. The most natural first candidates are:
+
+- the silver ratio
+  $$
+  1+\sqrt{2};
+  $$
+- more generally the metallic means
+  $$
+  \sigma_k = \frac{k+\sqrt{k^2+4}}{2},
+  \qquad k \geq 1;
+  $$
+- quadratic irrationals coming from periodic continued fractions;
+- ratios derived from denominators of convergents of bounded-type rotation numbers;
+- Feigenbaum-type scaling constants in other renormalization regimes.
+
+Thus the present golden-scale notebook can be regarded as the first member of a broader experimental program of searching for self-similar loci by minimizing $S_{N,m}^{(\alpha)}(x)$ over both $x$ and $\alpha$.
