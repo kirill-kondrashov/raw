@@ -29,7 +29,7 @@ Fix a bounded rectangle $B \subset \mathbb{C}$ containing $\mathcal{M}$. For eac
 
 Existing attempts appear to fall into three classes.
 
-First, the main rigorous literature studies recurrent structure in $\mathcal{M}$ by dynamical and renormalization methods rather than by direct image analysis. The works of McMullen, Dudko--Lyubich--Selinger, Dudko--Lyubich, Ch\'eritat, Gaidashev--Yampolsky, and Lyubich belong to this class. They locate and explain self-similar features, scaling laws, and renormalization patterns by analytic and combinatorial arguments, not by template matching on finite rasterizations.
+First, the main rigorous literature studies recurrent structure in $\mathcal{M}$ by dynamical and renormalization methods rather than by direct image analysis. The works of McMullen, Dudko--Lyubich--Selinger, Dudko--Lyubich, Chéritat, Gaidashev--Yampolsky, and Lyubich belong to this class. They locate and explain self-similar features, scaling laws, and renormalization patterns by analytic and combinatorial arguments, not by template matching on finite rasterizations.
 
 Second, there are computer-assisted search procedures implemented in fractal-exploration software. These methods are designed to locate minibrots, nuclei, or related distinguished parameters by using the dynamics of the defining iteration, for example Newton-type refinement or other parameter-space search heuristics. Such procedures constitute genuine algorithmic pattern search, but they are not generic computer-vision methods applied to the sampled images $(I_N)_{N \geq 1}$.
 
@@ -39,13 +39,13 @@ Accordingly, the problem formulated above seems to remain largely open in its pu
 
 ## The golden-scale self-similarity functional
 
-Fix a compact set $U \subset B$, an integer $m \geq 1$, and a number $r_0 > 0$ such that
+Fix a compact set $U \subset B$, an integer $m \geq 1$, and a number $r_0 \gt 0$ such that
 
 $$
 U + r_0 \overline{\mathbb{D}} \subset B,
 $$
 
-where $\mathbb{D} = \{z \in \mathbb{C} : |z| < 1\}$. Let
+where $\mathbb{D} = \lbrace z \in \mathbb{C} : |z| \lt 1 \rbrace$. Let
 
 $$
 \lambda = \frac{1+\sqrt{5}}{2},
@@ -54,65 +54,43 @@ r_n = r_0 \lambda^{-2n},
 \qquad 0 \leq n \leq m.
 $$
 
-Let $\widehat{I}_N \colon B \to \{0,1\}$ be the piecewise-constant extension of $I_N$, and define
+Let $\widehat{I}_N \colon B \to \lbrace 0,1 \rbrace$ be the piecewise-constant extension of $I_N$, and define
 
 $$
-\delta_N(z)
-=
-\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr)
--
-\operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr),
-\qquad z \in B.
+\delta_N(z) = \mathrm{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) - \mathrm{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr), \qquad z \in B.
 $$
 
 For $x \in U$ and $0 \leq n \leq m$, define
 
 $$
-f_{N,x,n}(u)
-=
-r_n^{-1}\delta_N(x+r_n u),
-\qquad
-u \in \overline{\mathbb{D}}.
+f_{N,x,n}(u) = r_n^{-1}\delta_N(x+r_n u), \qquad u \in \overline{\mathbb{D}}.
 $$
 
 For $1 \leq n \leq m$, define
 
 $$
-E_{N,n}(x)
-=
-\inf_{\theta \in [0,2\pi)}
-\left\|
-f_{N,x,n}
--
-f_{N,x,0}(e^{i\theta}\,\cdot)
-\right\|_{L^2(\overline{\mathbb{D}})}.
+E_{N,n}(x) = \inf_{\theta \in [0,2\pi)} \bigl\lVert f_{N,x,n} - f_{N,x,0}(e^{i\theta}\cdot) \bigr\rVert_{L^2(\overline{\mathbb{D}})}.
 $$
 
 Define the golden-scale self-similarity functional
 
 $$
-S_{N,m}(x)
-=
-\sum_{n=1}^m 2^{-n} E_{N,n}(x),
-\qquad x \in U.
+S_{N,m}(x) = \sum_{n=1}^m 2^{-n} E_{N,n}(x), \qquad x \in U.
 $$
 
 Define the candidate set
 
 $$
-\mathcal{C}_{N,m,\tau}
-=
-\{x \in U : S_{N,m}(x) \leq \tau\},
-\qquad \tau > 0,
+\mathcal{C}_{N,m,\tau} = \lbrace x \in U : S_{N,m}(x) \leq \tau \rbrace, \qquad \tau \gt 0,
 $$
 
 and define
 
 $$
-x_{N,m} \in \operatorname*{argmin}_{x \in U \cap \Gamma_N} S_{N,m}(x),
+x_{N,m} \in \mathop{\mathrm{argmin}}\limits_{x \in U \cap \Gamma_N} S_{N,m}(x),
 $$
 
-where $\Gamma_N$ is the sampling grid of $I_N$. The points of $\mathcal{C}_{N,m,\tau}$, or equivalently the minimizers of $S_{N,m}$ on $U \cap \Gamma_N$, are the outputs of the search procedure.
+where $\Gamma_N$ is the sampling grid of $I_N$. The points in this candidate set, or equivalently the minimizers of the functional on $U \cap \Gamma_N$, are the outputs of the search procedure.
 
 ## Experimental golden-scale search
 
@@ -137,7 +115,7 @@ $$
 
 On the chosen finite grid, the detected candidate set is finite. In the grid-based formulation over the countable family of finite sampling grids $(\Gamma_N)_{N \geq 1}$, the union of all sampled candidate sets is therefore at most countable.
 
-At present, this experiment is only qualitatively consistent with the Dudko-style theory: it does find low-score multiscale candidates near the main cardioid, so the functional is detecting the intended kind of self-similarity. However, it does not yet isolate the specific \((\)anti-\()\)golden mean point, nor does it verify the scaling law
+At present, this experiment is only qualitatively consistent with the Dudko-style theory: it does find low-score multiscale candidates near the main cardioid, so the functional is detecting the intended kind of self-similarity. However, it does not yet isolate the specific (anti-)golden mean point, nor does it verify the scaling law
 
 $$
 r_n \asymp \lambda^{-2n}
@@ -198,75 +176,99 @@ $$
 For each tested ratio $\alpha$, let
 
 $$
-x^*(\alpha) \in \operatorname*{argmin}_{x \in U \cap \Gamma_N} S_{N,m}^{(\alpha)}(x),
+x^{\ast}(\alpha) \in \mathop{\mathrm{argmin}}\limits_{x \in U \cap \Gamma_N} S_{N,m}^{(\alpha)}(x),
 $$
 
 where $\Gamma_N$ is the sampling grid. The following candidates were found.
 
-1. **Family 1**  
-   For
-   $$
-   \alpha \in \left\{ 1+\sqrt{2}, \frac{3+\sqrt{13}}{2}, 2+\sqrt{5}, [1,2,1,2,\ldots] \right\},
-   $$
-   the minimum value among the tested ratios was attained at
-   $$
-   \alpha = [1,2,1,2,\ldots] = \frac{1+\sqrt{3}}{2} \approx 1.366025,
-   $$
-   with
-   $$
-   x^*(\alpha) = (-0.8,0),
-   \qquad
-   S_{N,m}^{(\alpha)}(x^*(\alpha)) \approx 0.032690.
-   $$
+### Family 1
 
-2. **Family 2**  
-   For the metallic means
-   $$
-   \sigma_k = \frac{k+\sqrt{k^2+4}}{2},
-   \qquad 2 \leq k \leq 6,
-   $$
-   the smallest value was attained at
-   $$
-   \sigma_2 = 1+\sqrt{2} \approx 2.414214,
-   $$
-   with
-   $$
-   x^*(\sigma_2) = (-0.8,0),
-   \qquad
-   S_{N,m}^{(\sigma_2)}(x^*(\sigma_2)) \approx 0.042416.
-   $$
+For
 
-3. **Family 3**  
-   For the tested periodic continued fractions
-   $$
-   [1,2,1,2,\ldots], \quad [1,3,1,3,\ldots], \quad [2,3,2,3,\ldots], \quad [1,1,2,1,1,2,\ldots], \quad [2,2,1,2,2,1,\ldots],
-   $$
-   the smallest value was attained at
-   $$
-   \alpha = [1,3,1,3,\ldots] = \frac{1+\sqrt{13}}{2} \approx 1.263763,
-   $$
-   with
-   $$
-   x^*(\alpha) = (-0.8,0),
-   \qquad
-   S_{N,m}^{(\alpha)}(x^*(\alpha)) \approx 0.029201.
-   $$
+$$
+\alpha \in \lbrace 1+\sqrt{2}, \frac{3+\sqrt{13}}{2}, 2+\sqrt{5}, [1,2,1,2,\ldots] \rbrace,
+$$
 
-4. **Family 4**  
-   For the coarse interval scan
-   $$
-   \alpha \in \{1.25, 1.35, 1.50, 1.75, 2.00, 2.50, 3.00, 4.00\},
-   $$
-   the smallest value was attained at
-   $$
-   \alpha = 1.25,
-   $$
-   with
-   $$
-   x^*(1.25) = (-0.8,0),
-   \qquad
-   S_{N,m}^{(1.25)}(x^*(1.25)) \approx 0.028634.
-   $$
+the minimum value among the tested ratios was attained at
+
+$$
+\alpha = [1,2,1,2,\ldots] = \frac{1+\sqrt{3}}{2} \approx 1.366025,
+$$
+
+with
+
+$$
+x^{\ast}(\alpha) = (-0.8,0),
+\qquad
+S_{N,m}^{(\alpha)}(x^{\ast}(\alpha)) \approx 0.032690.
+$$
+
+### Family 2
+
+For the metallic means
+
+$$
+\sigma_k = \frac{k+\sqrt{k^2+4}}{2},
+\qquad 2 \leq k \leq 6,
+$$
+
+the smallest value was attained at
+
+$$
+\sigma_2 = 1+\sqrt{2} \approx 2.414214,
+$$
+
+with
+
+$$
+x^{\ast}(\sigma_2) = (-0.8,0),
+\qquad
+S_{N,m}^{(\sigma_2)}(x^{\ast}(\sigma_2)) \approx 0.042416.
+$$
+
+### Family 3
+
+For the tested periodic continued fractions
+
+$$
+[1,2,1,2,\ldots], \quad [1,3,1,3,\ldots], \quad [2,3,2,3,\ldots], \quad [1,1,2,1,1,2,\ldots], \quad [2,2,1,2,2,1,\ldots],
+$$
+
+the smallest value was attained at
+
+$$
+\alpha = [1,3,1,3,\ldots] = \frac{1+\sqrt{13}}{2} \approx 1.263763,
+$$
+
+with
+
+$$
+x^{\ast}(\alpha) = (-0.8,0),
+\qquad
+S_{N,m}^{(\alpha)}(x^{\ast}(\alpha)) \approx 0.029201.
+$$
+
+### Family 4
+
+For the coarse interval scan
+
+$$
+\alpha \in \lbrace 1.25, 1.35, 1.50, 1.75, 2.00, 2.50, 3.00, 4.00 \rbrace,
+$$
+
+the smallest value was attained at
+
+$$
+\alpha = 1.25,
+$$
+
+with
+
+$$
+x^{\ast}(1.25) = (-0.8,0),
+\qquad
+S_{N,m}^{(1.25)}(x^{\ast}(1.25)) \approx 0.028634.
+$$
 
 Thus, among all ratios tested so far in the non-golden notebook, the smallest observed value was
 
@@ -286,7 +288,7 @@ A natural next step is to replace the golden scaling law by a more general one
 
 $$
 r_n = r_0 \alpha^{-2n},
-\qquad \alpha > 1,
+\qquad \alpha \gt 1,
 $$
 
 and define the corresponding family of functionals
@@ -297,15 +299,8 @@ $$
 
 One may then search either over a finite set of prescribed values of $\alpha$ or over a discretized interval of possible ratios. The most natural first candidates are:
 
-- the silver ratio
-  $$
-  1+\sqrt{2};
-  $$
-- more generally the metallic means
-  $$
-  \sigma_k = \frac{k+\sqrt{k^2+4}}{2},
-  \qquad k \geq 1;
-  $$
+- the silver ratio $1+\sqrt{2}$;
+- more generally the metallic means $\sigma_k = \frac{k+\sqrt{k^2+4}}{2}$, where $k \geq 1$;
 - quadratic irrationals coming from periodic continued fractions;
 - ratios derived from denominators of convergents of bounded-type rotation numbers;
 - Feigenbaum-type scaling constants in other renormalization regimes.
