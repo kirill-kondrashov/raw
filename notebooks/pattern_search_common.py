@@ -12,6 +12,14 @@ def metallic_mean(k):
     return (k + math.sqrt(k * k + 4.0)) / 2.0
 
 
+def periodic_continued_fraction(period, iterations=32):
+    value = float(period[-1])
+    for _ in range(iterations):
+        for a in reversed(period):
+            value = float(a) + 1.0 / value
+    return value
+
+
 def mandelbrot_indicator(bounds, n, max_iter=200):
     xmin, xmax, ymin, ymax = bounds
     dx = (xmax - xmin) / n
@@ -307,3 +315,114 @@ def plot_ratio_comparison(results):
     ax.set_title("Best score by scaling ratio")
     ax.grid(axis="y", alpha=0.3)
     return fig, ax
+
+
+def candidate_summary_entries(results, limit=None):
+    items = results if limit is None else results[:limit]
+    summary = []
+    for item in items:
+        summary.append(
+            {
+                "name": item["name"],
+                "ratio": float(item["ratio"]),
+                "center": tuple(float(v) for v in item["best"]["center"]),
+                "score": float(item["best"]["score"]),
+                "local_minima": int(len(item["local_minima"])),
+            }
+        )
+    return summary
+
+
+def print_candidate_summary(results, limit=None):
+    for entry in candidate_summary_entries(results, limit=limit):
+        print(
+            entry["name"],
+            "ratio =",
+            round(entry["ratio"], 6),
+            "best center =",
+            tuple(round(v, 6) for v in entry["center"]),
+            "best score =",
+            round(entry["score"], 6),
+            "sampled local minima =",
+            entry["local_minima"],
+        )
+
+
+FOUND_RATIO_CANDIDATES = {
+    "family_one": [
+        {
+            "name": "periodic_[1,2]",
+            "ratio": 1.3660254037844386,
+            "center": (-0.8, 0.0),
+            "score": 0.032690037819788915,
+            "local_minima": 11,
+        },
+        {
+            "name": "silver",
+            "ratio": 2.414213562373095,
+            "center": (-0.8, 0.0),
+            "score": 0.04241620213597493,
+            "local_minima": 7,
+        },
+    ],
+    "family_two": [
+        {
+            "name": "metallic_2",
+            "ratio": 2.414213562373095,
+            "center": (-0.8, 0.0),
+            "score": 0.04241620213597493,
+            "local_minima": 7,
+        },
+        {
+            "name": "metallic_3",
+            "ratio": 3.302775637731995,
+            "center": (-0.76875, 0.0),
+            "score": 0.04350286240200262,
+            "local_minima": 5,
+        },
+    ],
+    "family_three": [
+        {
+            "name": "periodic_[1,3]",
+            "ratio": 1.2637626158259734,
+            "center": (-0.8, 0.0),
+            "score": 0.02920053684837689,
+            "local_minima": 9,
+        },
+        {
+            "name": "periodic_[1,2]",
+            "ratio": 1.3660254037844386,
+            "center": (-0.8, 0.0),
+            "score": 0.032690037819788915,
+            "local_minima": 11,
+        },
+    ],
+    "family_four": [
+        {
+            "name": "alpha_1.25",
+            "ratio": 1.25,
+            "center": (-0.8, 0.0),
+            "score": 0.028633567652667773,
+            "local_minima": 10,
+        },
+        {
+            "name": "alpha_1.35",
+            "ratio": 1.35,
+            "center": (-0.8, 0.0),
+            "score": 0.0322081982998703,
+            "local_minima": 11,
+        },
+    ],
+}
+
+
+FOUND_RATIO_CANDIDATES_SUMMARY = """
+Current non-golden ratio search summary from notebooks/other_scaling_ratios.ipynb:
+
+- Family 1 (first comparison set): periodic_[1,2] is best, ahead of silver.
+- Family 2 (metallic means 2 through 6): metallic_2 = silver is best.
+- Family 3 (periodic continued fractions): periodic_[1,3] is best.
+- Family 4 (coarse interval scan): alpha_1.25 is best among the sampled real ratios.
+
+In the current search window, the strongest candidates in all four families lie on the real axis, and the smallest best score observed so far is obtained by alpha_1.25.
+""".strip()
