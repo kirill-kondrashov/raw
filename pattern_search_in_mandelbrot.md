@@ -57,7 +57,7 @@ $$
 Let $\widehat{I}_N \colon B \to \lbrace 0,1 \rbrace$ be the piecewise-constant extension of $I_N$, and define
 
 $$
-\delta_N(z) = \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) - \operatorname{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr), \qquad z \in B.
+\delta_N(z) = \mathrm{dist}\bigl(z,\widehat{I}_N^{-1}(0)\bigr) - \mathrm{dist}\bigl(z,\widehat{I}_N^{-1}(1)\bigr), \qquad z \in B.
 $$
 
 For $x \in U$ and $0 \leq n \leq m$, define
