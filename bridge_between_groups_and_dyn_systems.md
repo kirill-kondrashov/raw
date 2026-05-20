@@ -370,6 +370,208 @@ the existence of a fixed point of $R$ and the existence of a stationary point of
 
 **Literature.** The connection between equilibria, isotropy, and fixed-point subspaces is one of the organizing principles of equivariant bifurcation theory. See Golubitsky, Stewart, and Schaeffer, [Singularities and Groups in Bifurcation Theory, Volume II](./refs/golubitsky-stewart-schaeffer-singularities-groups-bifurcation-vol2.pdf), Chossat and Lauterbach, [Methods in Equivariant Bifurcations and Dynamical Systems](https://archive-dsweb.siam.org/The-Magazine/All-Issues/methods-in-equivariant-bifurcations-and-dynamical-systems.html), and Golubitsky and Stewart, [Dynamics and Bifurcation in Networks, Chapter 13](https://epubs.siam.org/doi/10.1137/1.9781611977332.ch13). These references treat fixed-point subspaces as invariant subspaces and use them to organize equilibria and bifurcating solution branches.
 
+## Open problems related to the problem sections
+
+### Open Problem 1.1: Orbit-type stratification of a dynamical system
+
+Let $f \colon X \to X$ be a dynamical system and let $G(f)$ be its symmetry group. For each subgroup $K \leq G(f)$, define
+
+$$
+X_K=\lbrace x \in X : G(f)_x=K \rbrace
+$$
+
+and, for each conjugacy class $(K)$ of subgroups of $G(f)$, define the orbit-type stratum
+
+$$
+X_{(K)}=\lbrace x \in X : G(f)_x \text{ is conjugate to }K \rbrace.
+$$
+
+Determine conditions on $X$, $\mathrm{Aut}(X)$, and $f$ under which the decomposition
+
+$$
+X=\bigcup_{(K)}X_{(K)}
+$$
+
+has useful geometric structure, such as a stratification by manifolds, semialgebraic sets, or analytic sets.
+
+### Open Problem 1.2: Dynamical meaning of stabilizers
+
+Given $z \in X$, determine which dynamical properties of the orbit
+
+$$
+\lbrace f^n(z):n\geq 0\rbrace
+$$
+
+are determined by the pair
+
+$$
+\bigl(\mathcal{O}_{G(f)}(z),G(f)_z\bigr).
+$$
+
+In particular, decide when equality of symmetry type implies equality of qualitative dynamical type, such as periodicity, recurrence, stability, or membership in the same invariant set.
+
+### Open Problem 1.3: Realizability of stabilizer subgroups
+
+Given a subgroup $K \leq G(f)$, determine whether there exists a point $z \in X$ such that
+
+$$
+G(f)_z=K.
+$$
+
+Equivalently, classify the subgroups of $G(f)$ that occur as point stabilizers for the action
+
+$$
+G(f)\curvearrowright X.
+$$
+
+### Open Problem 2.1: Exact symmetry group problem
+
+For a prescribed group $H \leq \mathrm{Aut}(X)$, characterize the maps
+
+$$
+f \colon X \to X
+$$
+
+such that
+
+$$
+G(f)=H.
+$$
+
+In particular, for $X=\mathbb{C}$, characterize the maps satisfying
+
+$$
+G(f)=SO(2).
+$$
+
+### Open Problem 2.2: Symmetry rigidity
+
+Determine classes of maps $f \colon X \to X$ for which the inclusion
+
+$$
+H \leq G(f)
+$$
+
+forces a larger symmetry group
+
+$$
+H \lt G(f).
+$$
+
+For example, determine when rotational equivariance
+
+$$
+SO(2)\leq G(f)
+$$
+
+implies additional symmetries, such as reflection symmetry, scaling symmetry, or full orthogonal symmetry.
+
+### Open Problem 2.3: Computation of symmetry groups
+
+For a specified class of maps, such as polynomial maps, rational maps, smooth vector fields, or analytic vector fields, develop effective criteria to compute
+
+$$
+G(f)=\lbrace g \in \mathrm{Aut}(X):g\circ f=f\circ g\rbrace.
+$$
+
+The corresponding decision problem is to determine whether a given subgroup
+
+$$
+H\leq \mathrm{Aut}(X)
+$$
+
+satisfies
+
+$$
+G(f)=H.
+$$
+
+### Open Problem 3.1: Converse fixed-point problem
+
+Let $p \in X$ be a stationary point of $f$:
+
+$$
+f(p)=p.
+$$
+
+Determine whether there exists a nontrivial subgroup
+
+$$
+H\leq G(f)
+$$
+
+such that
+
+$$
+X^H=\lbrace p \rbrace.
+$$
+
+Equivalently, decide which stationary points arise as singleton fixed-point sets of symmetry subgroups.
+
+### Open Problem 3.2: Equilibria forced by symmetry
+
+Given a group action $H\curvearrowright X$, classify all dynamical systems $f \colon X \to X$ satisfying
+
+$$
+H\leq G(f)
+$$
+
+for which every point in $X^H$ is stationary:
+
+$$
+f(x)=x
+\qquad
+\text{for all }x\in X^H.
+$$
+
+More generally, determine when the restriction
+
+$$
+f|_{X^H}\colon X^H\to X^H
+$$
+
+has prescribed dynamics.
+
+### Open Problem 3.3: Stability of symmetry-forced stationary points
+
+Suppose
+
+$$
+H\leq G(f)
+$$
+
+and
+
+$$
+X^H=\lbrace p \rbrace.
+$$
+
+Determine how the representation of $H$ on the tangent space
+
+$$
+T_pX
+$$
+
+constrains the local stability, bifurcations, and normal forms of the stationary point $p$.
+
+For a vector field
+
+$$
+\dot{x}=F(x),
+$$
+
+this asks how the equivariance condition
+
+$$
+F(hx)=hF(x)
+$$
+
+restricts the linearization
+
+$$
+DF(p).
+$$
+
 ## Summary
 
 The bridge between groups and dynamical systems is the commutation relation
