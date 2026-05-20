@@ -1,56 +1,78 @@
 # Bridge Between Dynamical Systems and Groups
 
-Let $X$ be a phase space and let
+## Definition 1: Discrete dynamical system
+
+Let $X$ be a phase space. A discrete-time dynamical system on $X$ is a map
 
 $$
 f \colon X \to X
 $$
 
-define the discrete-time dynamical system
+together with the iteration rule
 
 $$
 x_{n+1}=f(x_n).
 $$
 
-Let $\mathrm{Aut}(X)$ denote a chosen group of admissible transformations of $X$, for example homeomorphisms, diffeomorphisms, linear automorphisms, or isometries. Define the symmetry group of $f$ by
+## Definition 2: Symmetry group of a dynamical system
+
+Let $\mathrm{Aut}(X)$ be a chosen group of admissible transformations of $X$, for example homeomorphisms, diffeomorphisms, linear automorphisms, or isometries.
+
+The symmetry group of $f$ relative to $\mathrm{Aut}(X)$ is
 
 $$
 G(f)=\lbrace g \in \mathrm{Aut}(X) : g \circ f = f \circ g \rbrace.
 $$
 
-This is the commutant of $f$ inside $\mathrm{Aut}(X)$; if $f \in \mathrm{Aut}(X)$, it is the usual centralizer of $f$ in $\mathrm{Aut}(X)$.
+This is the commutant of $f$ inside $\mathrm{Aut}(X)$. If $f \in \mathrm{Aut}(X)$, then $G(f)$ is the usual centralizer of $f$ in $\mathrm{Aut}(X)$.
 
-For $z \in X$, the group-theoretic data associated with $z$ are the $G(f)$-orbit
+## Definition 3: Orbit and stabilizer of a point
+
+For $z \in X$, define the $G(f)$-orbit of $z$ by
 
 $$
 \mathcal{O}_{G(f)}(z)=\lbrace g(z) : g \in G(f) \rbrace
 $$
 
-and the stabilizer subgroup
+and define the stabilizer subgroup of $z$ by
 
 $$
 G(f)_z=\lbrace g \in G(f) : g(z)=z \rbrace.
 $$
 
-Thus two points $z,w \in X$ have the same symmetry type with respect to the dynamical system if and only if
+## Problem 1: Symmetry type of a point
+
+Given $z \in X$, determine the data in $G(f)$ that describe the properties of $z$ preserved by the dynamics.
+
+The natural group-theoretic answer is the pair
+
+$$
+\bigl(\mathcal{O}_{G(f)}(z),G(f)_z\bigr).
+$$
+
+Two points $z,w \in X$ have the same symmetry type with respect to $f$ if and only if
 
 $$
 w \in \mathcal{O}_{G(f)}(z).
 $$
 
-In the case $X=\mathbb{C} \cong \mathbb{R}^2$, the standard rotation group is
+The stabilizer $G(f)_z$ records the symmetries of the dynamical system that fix $z$.
+
+## Lemma 1: Rotational symmetry in the complex plane
+
+Let $X=\mathbb{C}\cong \mathbb{R}^2$, and let
 
 $$
 SO(2)=\lbrace R_\theta : \mathbb{C} \to \mathbb{C},\ R_\theta(z)=e^{i\theta}z,\ \theta \in \mathbb{R}/2\pi\mathbb{Z} \rbrace.
 $$
 
-The assertion that $SO(2)$ is a symmetry group of $f$ is the inclusion
+Then
 
 $$
-SO(2) \leq G(f),
+SO(2) \leq G(f)
 $$
 
-which is equivalent to the rotational equivariance condition
+if and only if
 
 $$
 f(e^{i\theta}z)=e^{i\theta}f(z)
@@ -58,13 +80,41 @@ f(e^{i\theta}z)=e^{i\theta}f(z)
 \text{for all } \theta \in \mathbb{R}/2\pi\mathbb{Z}\text{ and all }z \in \mathbb{C}.
 $$
 
-For $X=\mathbb{R}^n$ and a subgroup $H \leq GL(n,\mathbb{R})$, the corresponding condition is
+Thus $SO(2)$ is a symmetry group of $f$ precisely when $f$ is rotationally equivariant.
+
+## Problem 2: When can the symmetry group be $SO(2)$?
+
+Determine whether the symmetry group of $f$ is exactly $SO(2)$.
+
+This requires the stronger condition
 
 $$
-H \leq G(f),
+G(f)=SO(2),
 $$
 
-or equivalently
+not merely
+
+$$
+SO(2)\leq G(f).
+$$
+
+Therefore, the answer depends on both $f$ and the chosen ambient transformation group $\mathrm{Aut}(X)$. It is not determined by the point $z \in \mathbb{C}$ alone.
+
+## Lemma 2: Higher-dimensional equivariance
+
+Let $X=\mathbb{R}^n$, and let
+
+$$
+H \leq GL(n,\mathbb{R}).
+$$
+
+Then
+
+$$
+H \leq G(f)
+$$
+
+if and only if
 
 $$
 f(hx)=h f(x)
@@ -72,19 +122,21 @@ f(hx)=h f(x)
 \text{for all } h \in H\text{ and all }x \in \mathbb{R}^n.
 $$
 
-Full rotational symmetry in dimension $n$ is obtained by taking
+Full rotational symmetry in dimension $n$ corresponds to the choice
 
 $$
 H=SO(n).
 $$
 
-For a continuous-time dynamical system given by a flow
+## Definition 4: Continuous-time dynamical system
+
+Let
 
 $$
-\Phi \colon \mathbb{R} \times X \to X,
+\Phi \colon \mathbb{R} \times X \to X
 $$
 
-define
+be a flow. Its symmetry group is
 
 $$
 G(\Phi)=\lbrace g \in \mathrm{Aut}(X) : g \circ \Phi_t = \Phi_t \circ g\text{ for all }t \in \mathbb{R} \rbrace.
@@ -96,7 +148,7 @@ $$
 \dot{x}=F(x),
 $$
 
-then $H \leq GL(n,\mathbb{R})$ acts by symmetries precisely when
+then a subgroup $H \leq GL(n,\mathbb{R})$ acts by symmetries if and only if
 
 $$
 F(hx)=hF(x)
@@ -104,47 +156,79 @@ F(hx)=hF(x)
 \text{for all } h \in H\text{ and all }x \in \mathbb{R}^n.
 $$
 
-A stationary point of the discrete system is a point $p \in X$ satisfying
+## Definition 5: Stationary points
+
+A stationary point of the discrete system $f \colon X \to X$ is a point $p \in X$ such that
 
 $$
 f(p)=p.
 $$
 
-A stationary point of the continuous system is a point $p \in X$ satisfying
+A stationary point of a flow $\Phi$ is a point $p \in X$ such that
 
 $$
 \Phi_t(p)=p
 \qquad
-\text{for all }t \in \mathbb{R},
+\text{for all }t \in \mathbb{R}.
 $$
 
-or equivalently, in vector-field form,
+For a vector field $\dot{x}=F(x)$, this is equivalent to
 
 $$
 F(p)=0.
 $$
 
-For a group action $H \curvearrowright X$, define the fixed-point set
+## Definition 6: Fixed-point set of a group action
+
+For a group action $H \curvearrowright X$, define
 
 $$
 X^H=\lbrace x \in X : hx=x\text{ for all }h \in H \rbrace.
 $$
 
-If $H \leq G(f)$, then
+For a single transformation $R \in \mathrm{Aut}(X)$, define
 
 $$
-f(X^H) \subseteq X^H.
+\mathrm{Fix}(R)=\lbrace x \in X : R(x)=x \rbrace.
 $$
 
-Indeed, if $x \in X^H$ and $h \in H$, then
+## Lemma 3: Symmetry fixed-point sets are dynamically invariant
+
+If
 
 $$
-hf(x)=f(hx)=f(x),
+H \leq G(f),
 $$
 
-so $f(x) \in X^H$.
+then
 
-Consequently, if
+$$
+f(X^H)\subseteq X^H.
+$$
+
+Proof. Let $x \in X^H$ and let $h \in H$. Since $h \in G(f)$,
+
+$$
+hf(x)=f(hx).
+$$
+
+Since $x \in X^H$, one has $hx=x$. Hence
+
+$$
+hf(x)=f(x).
+$$
+
+Therefore $f(x)\in X^H$.
+
+## Corollary 1: Singleton fixed-point sets give stationary points
+
+If
+
+$$
+H \leq G(f)
+$$
+
+and
 
 $$
 X^H=\lbrace p \rbrace,
@@ -158,16 +242,18 @@ $$
 
 Thus a singleton fixed-point set of a symmetry group is forced to be a stationary point of every dynamical system commuting with that group action.
 
-For the standard action of $SO(n)$ on $\mathbb{R}^n$,
+## Lemma 4: The origin is fixed by full rotational symmetry
+
+For the standard action of $SO(n)$ on $\mathbb{R}^n$ with $n \geq 2$,
 
 $$
 (\mathbb{R}^n)^{SO(n)}=\lbrace 0 \rbrace.
 $$
 
-Therefore, if
+Consequently, if
 
 $$
-SO(n) \leq G(f),
+SO(n)\leq G(f),
 $$
 
 then
@@ -176,12 +262,12 @@ $$
 f(0)=0.
 $$
 
-Similarly, if a vector field $F \colon \mathbb{R}^n \to \mathbb{R}^n$ is $SO(n)$-equivariant, meaning
+Similarly, if $F \colon \mathbb{R}^n \to \mathbb{R}^n$ is $SO(n)$-equivariant, meaning
 
 $$
 F(hx)=hF(x)
 \qquad
-\text{for all } h \in SO(n)\text{ and all }x \in \mathbb{R}^n,
+\text{for all }h \in SO(n)\text{ and all }x \in \mathbb{R}^n,
 $$
 
 then
@@ -190,27 +276,37 @@ $$
 F(0)=0.
 $$
 
-For a single rotation $R \in \mathrm{Aut}(X)$, define
+## Lemma 5: Fixed points of a single commuting rotation are invariant
+
+Let $R \in \mathrm{Aut}(X)$. If
 
 $$
-\mathrm{Fix}(R)=\lbrace x \in X : R(x)=x \rbrace.
+R \in G(f),
 $$
 
-If $R \in G(f)$, then
+then
 
 $$
-f(\mathrm{Fix}(R)) \subseteq \mathrm{Fix}(R).
+f(\mathrm{Fix}(R))\subseteq \mathrm{Fix}(R).
 $$
 
-Indeed, if $x \in \mathrm{Fix}(R)$, then
+Proof. If $x \in \mathrm{Fix}(R)$, then $R(x)=x$. Since $R \in G(f)$,
 
 $$
-R(f(x))=f(R(x))=f(x),
+R(f(x))=f(R(x))=f(x).
 $$
 
-so $f(x) \in \mathrm{Fix}(R)$.
+Hence $f(x)\in \mathrm{Fix}(R)$.
 
-If in addition
+## Corollary 2: A singleton rotation fixed point is stationary
+
+If
+
+$$
+R \in G(f)
+$$
+
+and
 
 $$
 \mathrm{Fix}(R)=\lbrace p \rbrace,
@@ -222,10 +318,48 @@ $$
 f(p)=p.
 $$
 
-Hence the existence of a stationary point of $f$ and the existence of a fixed point of a rotation are mathematically linked by the commutation relation
+## Problem 3: Relation between stationary points and rotation fixed points
+
+Determine when a fixed point of a rotation is also a stationary point of the dynamical system.
+
+The sufficient condition is the commutation relation
 
 $$
-R \circ f = f \circ R.
+R \circ f=f \circ R.
 $$
 
-Without this commutation relation, the existence of a fixed point of $R$ and the existence of a stationary point of $f$ are independent conditions.
+Under this condition,
+
+$$
+f(\mathrm{Fix}(R))\subseteq \mathrm{Fix}(R).
+$$
+
+If additionally
+
+$$
+\mathrm{Fix}(R)=\lbrace p \rbrace,
+$$
+
+then
+
+$$
+f(p)=p.
+$$
+
+Without the commutation relation
+
+$$
+R \circ f=f \circ R,
+$$
+
+the existence of a fixed point of $R$ and the existence of a stationary point of $f$ are independent conditions.
+
+## Summary
+
+The bridge between groups and dynamical systems is the commutation relation
+
+$$
+g\circ f=f\circ g.
+$$
+
+A group satisfying this relation acts by symmetries of the dynamical system. Its orbits and stabilizers describe symmetry types of points, and its fixed-point sets are invariant under the dynamics. When such a fixed-point set is a singleton, that point is forced to be stationary.
