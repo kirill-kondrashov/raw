@@ -581,3 +581,17 @@ g\circ f=f\circ g.
 $$
 
 A group satisfying this relation acts by symmetries of the dynamical system. Its orbits and stabilizers describe symmetry types of points, and its fixed-point sets are invariant under the dynamics. When such a fixed-point set is a singleton, that point is forced to be stationary.
+
+The open problems isolate three directions suggested by this bridge. The first is to understand how orbit and stabilizer data stratify the phase space and whether they determine qualitative dynamical behavior. The second is to characterize and compute exact symmetry groups
+
+$$
+G(f)
+$$
+
+for concrete classes of maps, including the case
+
+$$
+G(f)=SO(2).
+$$
+
+The third is to understand which stationary points are forced by symmetry, which stationary points arise from singleton fixed-point sets, and how the representation of the symmetry group on the tangent space constrains stability and bifurcation.
