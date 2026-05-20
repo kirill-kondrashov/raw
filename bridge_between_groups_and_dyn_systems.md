@@ -58,6 +58,8 @@ $$
 
 The stabilizer $G(f)_z$ records the symmetries of the dynamical system that fix $z$.
 
+**Literature.** This is the standard orbit-stabilizer viewpoint for group actions; see Lyons, [Group Actions](./refs/lyons-group-actions-libretexts.pdf), especially the definitions of orbit and stabilizer and the orbit-stabilizer theorem. In equivariant dynamics, the same language appears as orbit and isotropy data for solutions and states; see [Equivariant dynamical systems](https://www.scholarpedia.org/article/Equivariant_dynamical_systems) in Scholarpedia.
+
 ## Lemma 1: Rotational symmetry in the complex plane
 
 Let $X=\mathbb{C}\cong \mathbb{R}^2$, and let
@@ -82,6 +84,8 @@ $$
 
 Thus $SO(2)$ is a symmetry group of $f$ precisely when $f$ is rotationally equivariant.
 
+**Literature.** This is the usual definition of equivariance specialized to the rotation action of $SO(2)$. Standard references are Golubitsky, Stewart, and Schaeffer, [Singularities and Groups in Bifurcation Theory, Volume II](./refs/golubitsky-stewart-schaeffer-singularities-groups-bifurcation-vol2.pdf), especially the chapters on group-theoretic preliminaries and Hopf bifurcation with $O(2)$ symmetry, and Golubitsky and Stewart, [The Symmetry Perspective](https://link.springer.com/book/10.1007/978-3-0348-8167-8), which develops symmetry methods for equilibria, periodic states, and chaos.
+
 ## Problem 2: When can the symmetry group be $SO(2)$?
 
 Determine whether the symmetry group of $f$ is exactly $SO(2)$.
@@ -99,6 +103,8 @@ SO(2)\leq G(f).
 $$
 
 Therefore, the answer depends on both $f$ and the chosen ambient transformation group $\mathrm{Aut}(X)$. It is not determined by the point $z \in \mathbb{C}$ alone.
+
+**Literature.** The problem of finding the full symmetry group of a dynamical system is usually phrased as a centralizer problem. Baake's overview [A brief guide to reversing and extended symmetries of dynamical systems](./refs/baake-brief-guide-reversing-extended-symmetries-1803.06263.pdf) reviews this viewpoint and the related extension from centralizers to normalizers. For concrete computations of exact symmetry groups in dynamical systems, see also Baake and Roberts on [symmetries and reversing symmetries of toral automorphisms](./refs/baake-roberts-symmetries-reversing-symmetries-toral-automorphisms-math0006092.pdf).
 
 ## Lemma 2: Higher-dimensional equivariance
 
@@ -127,6 +133,8 @@ Full rotational symmetry in dimension $n$ corresponds to the choice
 $$
 H=SO(n).
 $$
+
+**Literature.** This is the basic equivariance condition for a linear group action on $\mathbb{R}^n$. The general theory is treated in Golubitsky, Stewart, and Schaeffer, [Singularities and Groups in Bifurcation Theory, Volume II](./refs/golubitsky-stewart-schaeffer-singularities-groups-bifurcation-vol2.pdf), and in Chossat and Lauterbach's book [Methods in Equivariant Bifurcations and Dynamical Systems](https://archive-dsweb.siam.org/The-Magazine/All-Issues/methods-in-equivariant-bifurcations-and-dynamical-systems.html), reviewed by DSWeb as a systematic account of equivariant bifurcation theory.
 
 ## Definition 4: Continuous-time dynamical system
 
@@ -220,6 +228,8 @@ $$
 
 Therefore $f(x)\in X^H$.
 
+**Literature.** Fixed-point subspaces are fundamental invariant subspaces in equivariant dynamics. Golubitsky and Stewart state this viewpoint explicitly in [Dynamics and Bifurcation in Networks, Chapter 13](https://epubs.siam.org/doi/10.1137/1.9781611977332.ch13): fixed-point subspaces of isotropy subgroups are flow-invariant for arbitrary equivariant ODEs. The same principle is part of the standard setup in equivariant bifurcation theory; see Chossat and Lauterbach, [Methods in Equivariant Bifurcations and Dynamical Systems](https://archive-dsweb.siam.org/The-Magazine/All-Issues/methods-in-equivariant-bifurcations-and-dynamical-systems.html).
+
 ## Corollary 1: Singleton fixed-point sets give stationary points
 
 If
@@ -276,6 +286,8 @@ $$
 F(0)=0.
 $$
 
+**Literature.** The statement is an instance of fixed-point subspace invariance for the standard representation of $SO(n)$. For the role of fixed-point subspaces in equivariant dynamics, see Golubitsky and Stewart, [Dynamics and Bifurcation in Networks, Chapter 13](https://epubs.siam.org/doi/10.1137/1.9781611977332.ch13). For rotational actions and spherical symmetry in dynamical systems, see Golubitsky and Stewart, [The Symmetry Perspective](https://link.springer.com/book/10.1007/978-3-0348-8167-8), and Golubitsky, Stewart, and Schaeffer, [Singularities and Groups in Bifurcation Theory, Volume II](./refs/golubitsky-stewart-schaeffer-singularities-groups-bifurcation-vol2.pdf).
+
 ## Lemma 5: Fixed points of a single commuting rotation are invariant
 
 Let $R \in \mathrm{Aut}(X)$. If
@@ -297,6 +309,8 @@ R(f(x))=f(R(x))=f(x).
 $$
 
 Hence $f(x)\in \mathrm{Fix}(R)$.
+
+**Literature.** For a single commuting transformation, this is the same centralizer idea used in the literature on symmetries and reversing symmetries of maps. Baake, [A brief guide to reversing and extended symmetries of dynamical systems](./refs/baake-brief-guide-reversing-extended-symmetries-1803.06263.pdf), reviews symmetries of a homeomorphism through its centralizer. The invariant fixed-set conclusion is the one-generator version of fixed-point subspace invariance in equivariant dynamics; compare Golubitsky and Stewart, [Dynamics and Bifurcation in Networks, Chapter 13](https://epubs.siam.org/doi/10.1137/1.9781611977332.ch13).
 
 ## Corollary 2: A singleton rotation fixed point is stationary
 
@@ -353,6 +367,8 @@ R \circ f=f \circ R,
 $$
 
 the existence of a fixed point of $R$ and the existence of a stationary point of $f$ are independent conditions.
+
+**Literature.** The connection between equilibria, isotropy, and fixed-point subspaces is one of the organizing principles of equivariant bifurcation theory. See Golubitsky, Stewart, and Schaeffer, [Singularities and Groups in Bifurcation Theory, Volume II](./refs/golubitsky-stewart-schaeffer-singularities-groups-bifurcation-vol2.pdf), Chossat and Lauterbach, [Methods in Equivariant Bifurcations and Dynamical Systems](https://archive-dsweb.siam.org/The-Magazine/All-Issues/methods-in-equivariant-bifurcations-and-dynamical-systems.html), and Golubitsky and Stewart, [Dynamics and Bifurcation in Networks, Chapter 13](https://epubs.siam.org/doi/10.1137/1.9781611977332.ch13). These references treat fixed-point subspaces as invariant subspaces and use them to organize equilibria and bifurcating solution branches.
 
 ## Summary
 
