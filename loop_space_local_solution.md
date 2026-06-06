@@ -32,101 +32,128 @@ The suspension/evaluation adjoint pair used below is quoted from Neisendorfer:
 
 > Define the suspension map $\Sigma = \Sigma_X : X \to \Omega\Sigma X$ by $\Sigma(x)(t) = \langle x,t\rangle$ for all $x \in X$ and $0 \leq t \leq 1$. This is just the adjoint of the identity map $1_{\Sigma X} : \Sigma X \to \Sigma X$. The other adjoint is the evaluation map $e = e_X : \Sigma\Omega X \to X$ with $e(\langle t,\omega\rangle) = \omega(t)$.
 
-The symbols $\Sigma$, $\Omega$, $\operatorname{map}$, and $\operatorname{map}_*$ are therefore Neisendorfer's notation in the quoted text. The letter $f$ below is not Neisendorfer's notation; it is only a temporary name for an arbitrary pointed map in the proof.
+The symbols $\Sigma$, $\Omega$, $\operatorname{map}$, and $\operatorname{map}_*$ are therefore Neisendorfer's notation in the quoted text.
+
+The letters $f$ and $H$ below are not Neisendorfer's notation. They are only temporary proof notation.
 
 ## Solution
 
-Assume that $X$ is local. By Definition 2.1.1 and the quoted "in other words" sentence immediately following it, every pointed map
+Assume that $X$ is local. By Definition 2.1.1 and the quoted "in other words" sentence immediately following it, every pointed map of the following form is homotopic to the constant map.
+
+**Formula (1).**
 
 $$
 \Sigma^n M \to X
-\tag{1}
 $$
 
-is homotopic to the constant map, for every $n \geq 0$. Formula (1) comes from Neisendorfer's sentence "all pointed maps $\Sigma^n M \to X$ must be homotopic to the constant." The inequality $n \geq 0$ is not written in that quoted sentence, but it is the range meant here for the iterated suspension notation $\Sigma^n M$ appearing in that sentence.
+**Source of Formula (1).** This is Neisendorfer's sentence "all pointed maps $\Sigma^n M \to X$ must be homotopic to the constant." The inequality $n \geq 0$ is not written in that quoted sentence, but it is the range meant here for the iterated suspension notation $\Sigma^n M$ appearing there.
 
-To prove that $\Omega X$ is local, Definition 2.1.1 says it is enough to prove that
+To prove that $\Omega X$ is local, Definition 2.1.1 says it is enough to prove that the following mapping space is weakly contractible.
+
+**Formula (2).**
 
 $$
 \operatorname{map}_*(M,\Omega X)
-\tag{2}
 $$
 
-is weakly contractible. Formula (2) comes from Definition 2.1.1, condition 2), with $X$ replaced by $\Omega X$. By the same quoted "in other words" sentence, again with $X$ replaced by $\Omega X$, it is enough to prove that every pointed map
+**Source of Formula (2).** This is Definition 2.1.1, condition 2), with $X$ replaced by $\Omega X$.
+
+By the same quoted "in other words" sentence, again with $X$ replaced by $\Omega X$, it is enough to prove that every pointed map of the following form is homotopic to the constant map.
+
+**Formula (3).**
 
 $$
 f \colon \Sigma^n M \to \Omega X
-\tag{3}
 $$
 
-is homotopic to the constant map. Formula (3) comes from Neisendorfer's sentence "all pointed maps $\Sigma^n M \to X$ must be homotopic to the constant," with the target $X$ replaced by $\Omega X$ and with the temporary proof name $f$ added. The letter $f$ is not Neisendorfer's notation.
+**Source of Formula (3).** This comes from Neisendorfer's sentence "all pointed maps $\Sigma^n M \to X$ must be homotopic to the constant," with the target $X$ replaced by $\Omega X$. The letter $f$ is proof-only notation and is not quoted from Neisendorfer.
 
-Neisendorfer's quoted evaluation formula, from the suspension/evaluation adjoint pair quoted above, is
+Neisendorfer's quoted evaluation formula is:
+
+**Formula (4).**
 
 $$
-e_X(\langle t,\omega\rangle)=\omega(t).
-\tag{4}
+e_X(\langle t,\omega\rangle)=\omega(t)
 $$
 
-Apply this formula to the value $\omega=f(z)$, where $z$ is a point of $\Sigma^n M$. This gives a pointed map
+**Source of Formula (4).** This is quoted from Neisendorfer's suspension/evaluation adjoint-pair sentence:
+
+> The other adjoint is the evaluation map $e = e_X : \Sigma\Omega X \to X$ with $e(\langle t,\omega\rangle) = \omega(t)$.
+
+Apply Formula (4) to the value $\omega=f(z)$, where $z$ is a point of $\Sigma^n M$. This gives a pointed map:
+
+**Formula (5).**
 
 $$
 \Sigma(\Sigma^n M) \to X,
 \qquad
-\langle t,z\rangle \mapsto f(z)(t).
-\tag{5}
+\langle t,z\rangle \mapsto f(z)(t)
 $$
 
-Formula (5) is not quoted verbatim from Neisendorfer. It is obtained by applying Neisendorfer's formula (4), namely $e_X(\langle t,\omega\rangle)=\omega(t)$, to the value $\omega=f(z)$. The display (5) is exactly the map corresponding to (3) under Neisendorfer's quoted sentence that the evaluation map is "the other adjoint." No extra bracket notation is being introduced here.
+**Source of Formula (5).** This is not quoted verbatim from Neisendorfer. It is obtained by applying Neisendorfer's Formula (4), namely $e_X(\langle t,\omega\rangle)=\omega(t)$, to $\omega=f(z)$. Formula (5) is the map corresponding to Formula (3) under Neisendorfer's quoted sentence that the evaluation map is "the other adjoint."
 
-The source $\Sigma(\Sigma^n M)$ is the next iterated suspension, written
+The source $\Sigma(\Sigma^n M)$ is the next iterated suspension:
 
-$$
-\Sigma^{n+1}M.
-\tag{6}
-$$
-
-Formula (6) is not quoted verbatim from Neisendorfer. The iterated-suspension notation is present in Neisendorfer's quoted phrase "$\Sigma^n M$"; equation (6) is only the standard reading of one more suspension.
-
-Thus (5) is a pointed map
+**Formula (6).**
 
 $$
-\Sigma^{n+1}M \to X.
-\tag{7}
+\Sigma^{n+1}M
 $$
 
-Formula (7) is not a separate quotation from Neisendorfer; it is formula (5) rewritten using formula (6). By (1), the pointed map (7) is homotopic to the constant map. Let $H$ be such a pointed homotopy:
+**Source of Formula (6).** This is not quoted verbatim from Neisendorfer. The iterated-suspension notation is present in Neisendorfer's quoted phrase "$\Sigma^n M$"; Formula (6) is the standard reading of one more suspension.
+
+Thus Formula (5) is a pointed map of the following form:
+
+**Formula (7).**
 
 $$
-H \colon \Sigma^{n+1}M \times I \to X.
-\tag{8}
+\Sigma^{n+1}M \to X
 $$
 
-Formula (8) is proof-only notation for the homotopy whose existence follows from formula (1). The letter $H$ is not Neisendorfer's notation.
+**Source of Formula (7).** This is not a separate quotation from Neisendorfer. It is Formula (5) rewritten using Formula (6).
 
-For a point $z$ of $\Sigma^n M$, define a path in $X$ by
+By Formula (1), the pointed map in Formula (7) is homotopic to the constant map. Let $H$ be such a pointed homotopy:
 
-$$
-t \mapsto H(\langle t,z\rangle,s).
-\tag{9}
-$$
-
-Formula (9) is not quoted verbatim from Neisendorfer. It uses the same evaluation pattern as Neisendorfer's formula (4), now applied to the homotopy $H$. Here $s$ is the homotopy parameter. Formula (9) gives a pointed map $\Sigma^n M \to \Omega X$ for each value of $s$. At the initial value of $s$, it is the original map (3), because (5) was defined by $\langle t,z\rangle \mapsto f(z)(t)$. At the final value of $s$, it is the constant map
+**Formula (8).**
 
 $$
-\Sigma^n M \to \Omega X.
-\tag{10}
+H \colon \Sigma^{n+1}M \times I \to X
 $$
 
-Formula (10) is not quoted from Neisendorfer. It is the constant map produced at the final value of the proof-only homotopy (8).
+**Source of Formula (8).** This is proof-only notation for the homotopy whose existence follows from Formula (1). The letter $H$ is not Neisendorfer's notation.
 
-Thus the original pointed map
+For a point $z$ of $\Sigma^n M$, define a path in $X$ by:
+
+**Formula (9).**
+
+$$
+t \mapsto H(\langle t,z\rangle,s)
+$$
+
+**Source of Formula (9).** This is not quoted verbatim from Neisendorfer. It uses the same evaluation pattern as Neisendorfer's Formula (4), now applied to the homotopy $H$. Here $s$ is the homotopy parameter.
+
+Formula (9) gives a pointed map $\Sigma^n M \to \Omega X$ for each value of $s$.
+
+At the initial value of $s$, it is the original map Formula (3), because Formula (5) was defined by $\langle t,z\rangle \mapsto f(z)(t)$.
+
+At the final value of $s$, it is the constant map:
+
+**Formula (10).**
+
+$$
+\Sigma^n M \to \Omega X
+$$
+
+**Source of Formula (10).** This is not quoted from Neisendorfer. It is the constant map produced at the final value of the proof-only homotopy in Formula (8).
+
+Thus the original pointed map is homotopic to the constant map:
+
+**Formula (11).**
 
 $$
 f \colon \Sigma^n M \to \Omega X
-\tag{11}
 $$
 
-is homotopic to the constant map. Formula (11) repeats the proof-only arbitrary map introduced in formula (3).
+**Source of Formula (11).** This repeats the proof-only arbitrary map introduced in Formula (3).
 
 Therefore every pointed map $\Sigma^n M \to \Omega X$ is homotopic to the constant map. By Neisendorfer's quoted Definition 2.1.1 and its quoted "in other words" reformulation, $\operatorname{map}_*(M,\Omega X)$ is weakly contractible. Hence $\Omega X$ is local.
