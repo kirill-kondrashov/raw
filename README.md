@@ -2,7 +2,8 @@
 
 - [Bridge between group and MLC](./bridge_between_group_and_mlc.md)
 - [Bridge between dynamical systems and groups](./bridge_between_groups_and_dyn_systems.md)
-- [Bridge between Schur multiplier and Mandelbrot](./bridge_between_schur_multiplier_and_mandelbrot.md)
+- [Bridge between Pacman renormalization and noncommutative motives](./bridge_between_pacman_renormalization_and_noncommutative_motives.md)
+- [Bridge between Schur multiplier and MLC](./bridge_between_schur_multiplier_and_mlc.md)
 - [Pattern search in Mandelbrot](./pattern_search_in_mandelbrot.md)
 - [Notebook: Golden-scale self-similarity functional](./notebooks/golden_scale_self_similarity.ipynb)
 - [Notebook: Search over other scaling ratios](./notebooks/other_scaling_ratios.ipynb)
