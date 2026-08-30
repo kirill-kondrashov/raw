@@ -187,7 +187,7 @@ prime Pacman renormalization on rotation numbers is
 $$
 R_{\mathrm{prm}}(\theta)=
 \begin{cases}
-\dfrac{\theta}{1-\theta}, & 0\leq\theta\leq \dfrac12,\\[6pt]
+\dfrac{\theta}{1-\theta}, & 0\leq\theta\leq \dfrac12,\\
 \dfrac{2\theta-1}{\theta}, & \dfrac12\leq\theta\leq 1.
 \end{cases}
 $$
