@@ -341,10 +341,12 @@ $\mathcal A,\mathcal B\in\operatorname{Cat}^{\mathrm{perf}}_\infty$, their
 tensor product is
 
 $$
-\mathcal A\widehat\otimes\mathcal B
-=
+\begin{aligned}
+\mathcal A\widehat{\otimes}\mathcal B
+&=
 \bigl(\operatorname{Ind}(\mathcal A)\otimes
-\operatorname{Ind}(\mathcal B)\bigr)^\omega,
+\operatorname{Ind}(\mathcal B)\bigr)^\omega.
+\end{aligned}
 $$
 
 where $\operatorname{Ind}(-)$ is ind-completion and the superscript $\omega$
@@ -359,7 +361,7 @@ compact spectrum for every $x,y\in\mathcal A$.
 
 **Definition 47 (Smooth stable category).** A small stable category
 $\mathcal A$ is smooth when it is a perfect module over
-$\mathcal A^{\mathrm{op}}\widehat\otimes\mathcal A$.
+$\mathcal A^{\mathrm{op}}\widehat{\otimes}\mathcal A$.
 
 Here $\mathcal A$ is regarded as the bimodule given by its mapping spectra,
 and perfect means belonging to the smallest subcategory of modules containing
@@ -413,17 +415,19 @@ $$
 \mathcal U_{\mathrm{loc}}(\mathbb S^\omega),
 \mathcal U_{\mathrm{loc}}(\mathcal A)
 \bigr)
-\simeq \mathbb K(\mathcal A).
+\simeq \mathbb{K}(\mathcal A).
 $$
 
 The non-connective theory is obtained from cone and suspension constructions,
 schematically
 
 $$
-\mathbb K(\mathcal A)
-=
+\begin{aligned}
+\mathbb{K}(\mathcal A)
+&=
 \operatorname*{colim}_{n}
 \Omega^n K\bigl(\Sigma_\kappa^{(n)}\mathcal A\bigr).
+\end{aligned}
 $$
 
 **Definition 49 (Topological Hochschild homology).**
@@ -747,7 +751,7 @@ E(\mathcal A_{\mathrm{return}})
 E(\mathcal A_{\mathrm{renormalized}}).
 $$
 
-Taking $E=\mathbb K$ uses Theorem 3. The quotient functor must identify
+Taking $E=\mathbb{K}$ uses Theorem 3. The quotient functor must identify
 boundary gluing with this cofiber.
 
 **Renormalization dynamics.** Definition 72 gives an exact endofunctor
@@ -839,7 +843,7 @@ the gluing map $\psi$ and prove that $i$ is fully faithful and that
 $\operatorname{Idem}(\mathcal A_{\mathrm{return}}/\operatorname{im}(i))
 \simeq\mathcal A_{\mathrm{renormalized}}$. Then prove, for every localizing
 invariant $E$, the induced sequence is a cofiber sequence, including
-$E=\mathbb K$.
+$E=\mathbb{K}$.
 
 **Missing from Sections V and VI.** Definition 66 supplies the point-set map
 $\psi$ but no stable categories, quotient, or exact functors. Section VI
