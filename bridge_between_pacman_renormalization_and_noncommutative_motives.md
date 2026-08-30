@@ -597,8 +597,7 @@ $$
 
 **Definition 64 (Nuclear module).** A relatively compactly generated
 $\mathcal E$-module $\mathcal C$ is nuclear over $\mathcal E$ when, for every
-$\omega_1$-compact $\mathcal D\in
-(\mathrm{Cat}^{\mathrm{cg}}_{\mathcal E})_{\omega_1}$ and every strongly
+$\omega_1$-compact $\mathcal D\in(\mathrm{Cat}^{\mathrm{cg}}_{\mathcal E})_{\omega_1}$ and every strongly
 continuous $\mathcal E$-linear functor $F:\mathcal D\to\mathcal C$, compactness
 of $F$ as a morphism in $\mathrm{Cat}^{\mathrm{cg}}_{\mathcal E}$
 implies that $F$ is right trace-class over $\mathcal E$.
@@ -763,8 +762,7 @@ $R_*^p\mathcal A_*\simeq\mathcal A_*$.
 
 **Traces.** If $\mathcal A$ is dualizable (Definition 48 and Theorem 1), the
 endomorphism $R_*$ has a trace
-$\mathrm{Tr}(R_*)\in
-\mathrm{Map}_{\mathrm{Mot}_{\mathrm{loc}}}(\mathbb 1,\mathbb 1)$
+$\mathrm{Tr}(R_*)\in\mathrm{Map}_{\mathrm{Mot}_{\mathrm{loc}}}(\mathbb 1,\mathbb 1)$
 in the tensor unit. Definitions 53-63 and Theorem 4 give the relative
 version. A
 comparison with rays or bubbles requires an incidence functor $\Phi$ and an
@@ -806,9 +804,9 @@ $(h,\widetilde h,\widehat h)$ satisfying all equations in Definition 67,
 with the product compact-open topology. Prove that these spaces have
 continuous identities and componentwise composition, that $\mathscr P_n$
 admits a small skeleton, and that
-$\mathcal S_n(P,Q)=\Sigma^\infty_+
-\mathrm{Map}_{\mathscr P_n}(P,Q)$ is independent up to Morita
-equivalence of the admissible truncation, marking, and representative choices.
+$\mathcal S_n(P,Q)=\Sigma^\infty_+\mathrm{Map}_{\mathscr P_n}(P,Q)$ is
+independent up to Morita equivalence of the admissible truncation, marking, and
+representative choices.
 
 **Missing from Sections V and VI.** Section V specifies the tuples and
 equations but does not prove closure under composition, smallness, or
@@ -840,10 +838,9 @@ $i:\mathcal A_{\mathrm{discarded}}\to\mathcal A_{\mathrm{return}}$ whose
 image is the discarded boundary sector. Define the quotient functor
 $q:\mathcal A_{\mathrm{return}}\to\mathcal A_{\mathrm{renormalized}}$ from
 the gluing map $\psi$ and prove that $i$ is fully faithful and that
-$\mathrm{Idem}(\mathcal A_{\mathrm{return}}/\mathrm{im}(i))
-\simeq\mathcal A_{\mathrm{renormalized}}$. Then prove, for every localizing
-invariant $E$, the induced sequence is a cofiber sequence, including
-$E=\mathbb{K}$.
+$\mathrm{Idem}(\mathcal A_{\mathrm{return}}/\mathrm{im}(i))\simeq\mathcal A_{\mathrm{renormalized}}$.
+Then prove, for every localizing invariant $E$, the induced sequence is a
+cofiber sequence, including $E=\mathbb{K}$.
 
 **Missing from Sections V and VI.** Definition 66 supplies the point-set map
 $\psi$ but no stable categories, quotient, or exact functors. Section VI
@@ -930,8 +927,7 @@ finite-dimensional subquotients $W$ of
 $\mathcal L(\mathcal U_{\mathrm{loc}}(\mathcal A))$ and $W_{f_*}$ of the
 tangent representation at $f_*$, together with an isomorphism
 $\gamma:W\to W_{f_*}$ satisfying
-$\gamma\circ\mathcal L(\mathcal U_{\mathrm{loc}}(R_*))|_W
-=D R_{f_*}|_{W_{f_*}}\circ\gamma$. For every compatible chain
+$\gamma\circ\mathcal L(\mathcal U_{\mathrm{loc}}(R_*))|_W=D R_{f_*}|_{W_{f_*}}\circ\gamma$. For every compatible chain
 $\rho_n(P_n)=P_{n+1}$ represented by $f_*$, prove uniform constants
 $C>0$ and $0<\alpha<1$ with
 $\mathrm{diam}Q_n(P_n)\leq C\alpha^n$. In the golden-mean case, prove
