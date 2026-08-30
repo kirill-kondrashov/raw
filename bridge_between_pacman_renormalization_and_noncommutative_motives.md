@@ -226,8 +226,8 @@ conjugacy $h:U_1\cup V_1\longrightarrow U_2\cup V_2$
 that is conformal on the Siegel disks.
 
 **Theorems from the Pacman paper.** For every $\theta\in\Theta_{\mathrm{per}}$, the Pacman renormalization has a
-unique periodic point $f_*$ with rotation number $\theta$. The corresponding
-operator is hyperbolic at $f_*$. Its unstable manifold is one-dimensional,
+unique periodic point $f_{\ast}$ with rotation number $\theta$. The corresponding
+operator is hyperbolic at $f_{\ast}$. Its unstable manifold is one-dimensional,
 and its stable manifold consists of the corresponding Siegel Pacmen. The
 analytic operator is compact on a suitable Banach neighborhood.
 
@@ -263,8 +263,8 @@ $\mathrm{Cat}^{\mathrm{ex}}_\infty$ is the category whose objects are
 small stable infinity-categories and whose morphisms are exact functors.
 
 **Definition 36 (Perfect stable categories).** The category
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$ is the full subcategory of
-$\mathrm{Cat}^{\mathrm{ex}}_\infty$ consisting of idempotent-complete
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$ is the full subcategory of
+$\mathrm{Cat}^{\mathrm{ex}}\kern0mu_{\infty}$ consisting of idempotent-complete
 stable infinity-categories, where every idempotent splits.
 
 **Definition 37 (Morita equivalence).** An exact functor
@@ -307,9 +307,9 @@ satisfying the following conditions:
 additive invariant that sends every exact sequence to a cofiber sequence.
 
 **Definition 42 (Universal additive motive).** The additive motive category
-$\mathrm{Mot}_{\mathrm{add}}$ is the stable presentable category
+$\mathrm{Mot}\kern0mu_{\mathrm{add}}$ is the stable presentable category
 equipped with the universal additive invariant
-$\mathcal U_{\mathrm{add}}:\mathrm{Cat}^{\mathrm{ex}}_\infty\longrightarrow\mathrm{Mot}_{\mathrm{add}}$.
+$\mathcal U_{\mathrm{add}}:\mathrm{Cat}^{\mathrm{ex}}\kern0mu_{\infty}\longrightarrow\mathrm{Mot}\kern0mu_{\mathrm{add}}$.
 
 Precomposition with $\mathcal U_{\mathrm{add}}$ induces, for every stable
 presentable $\mathcal D$, the equivalence
@@ -322,9 +322,9 @@ $$
 $$
 
 **Definition 43 (Universal localizing motive).** The localizing motive
-category $\mathrm{Mot}_{\mathrm{loc}}$ is the stable presentable
+category $\mathrm{Mot}\kern0mu_{\mathrm{loc}}$ is the stable presentable
 category equipped with the universal localizing invariant
-$\mathcal U_{\mathrm{loc}}:\mathrm{Cat}^{\mathrm{ex}}_\infty\longrightarrow\mathrm{Mot}_{\mathrm{loc}}$.
+$\mathcal U_{\mathrm{loc}}:\mathrm{Cat}^{\mathrm{ex}}\kern0mu_{\infty}\longrightarrow\mathrm{Mot}\kern0mu_{\mathrm{loc}}$.
 
 Precomposition with $\mathcal U_{\mathrm{loc}}$ induces, for every stable
 presentable $\mathcal D$, the equivalence
@@ -496,8 +496,8 @@ $$
 
 for every accessible stable category $\mathcal T$ with $\kappa$-filtered
 colimits. Write
-$\mathrm{Mot}^{\mathrm{loc}}_{\mathcal E}$ for
-$\mathrm{Mot}^{\mathrm{loc}}_{\mathcal E,\omega}$.
+$\mathrm{Mot}^{\mathrm{loc}}\kern0mu_{\mathcal E}$ for
+$\mathrm{Mot}^{\mathrm{loc}}\kern0mu_{\mathcal E,\omega}$.
 
 **Definition 58 (Relative tensor product).** For a dualizable left
 $\mathcal E$-module $\mathcal C$ and a dualizable left
@@ -519,8 +519,8 @@ $$
 $E_1$-monoidal category $\mathcal E$ is rigid when its unit
 $\mathbb 1_{\mathcal E}$ is compact and its multiplication functor
 $\mu:\mathcal E\otimes\mathcal E\longrightarrow\mathcal E$
-has a colimit-preserving right adjoint that is
-$\mathcal E$-$\mathcal E$-linear.
+has a colimit-preserving right adjoint that is linear for the left and right
+$\mathcal E$-actions.
 
 **Definition 60 (Multiplicative opposite).** For an $E_1$-monoidal category
 $\mathcal E$, the multiplicative opposite $\mathcal E^{\mathrm{mop}}$ is the
@@ -597,7 +597,7 @@ $$
 
 **Definition 64 (Nuclear module).** A relatively compactly generated
 $\mathcal E$-module $\mathcal C$ is nuclear over $\mathcal E$ when, for every
-$\omega_1$-compact $\mathcal D\in(\mathrm{Cat}^{\mathrm{cg}}_{\mathcal E})_{\omega_1}$ and every strongly
+$\omega_1$-compact $\mathcal D\in(\mathrm{Cat}^{\mathrm{cg}}\kern0mu_{\mathcal E})\kern0mu_{\omega_1}$ and every strongly
 continuous $\mathcal E$-linear functor $F:\mathcal D\to\mathcal C$, compactness
 of $F$ as a morphism in $\mathrm{Cat}^{\mathrm{cg}}_{\mathcal E}$
 implies that $F$ is right trace-class over $\mathcal E$.
@@ -652,15 +652,15 @@ map (Definition 20), with $Rf:\widehat U\to\widehat V$ as in Definition 24.
 
 **Definition 67 (Marked morphism).** For finite marked Pacman models
 $P=(f,S,G,\psi,\mathfrak m_n)$ and
-$P'=(f',S',G',\psi',\mathfrak m'_n)$, a marked morphism
-$P\to P'$ is a tuple $(h,\widetilde h,\widehat h)$ in which $h$ and
+$P\prime=(f\prime,S\prime,G\prime,\psi\prime,\mathfrak m\prime_{n})$, a marked morphism
+$P\to P\prime$ is a tuple $(h,\widetilde h,\widehat h)$ in which $h$ and
 $\widehat h$ are hybrid conjugacies (Definition 32) for $f$ and $Rf$,
 respectively, $\widetilde h:S\to S'$ is a homeomorphism preserving the
 distinguished boundary arcs, and
-$h(U_\pm)=U'_\pm$, $\widetilde h\circ g_\pm=g'_\pm\circ h|_{U_\pm}$,
+$h(U_{\pm})=U\prime_{\pm}$, $\widetilde h\circ g_{\pm}=g\prime_{\pm}\circ h\vert_{U_{\pm}}$,
 $\widehat h\circ\psi=\psi'\circ\widetilde h$,
 $\widehat h\circ Rf=Rf'\circ\widehat h$, and
-$h(\mathfrak m_n)=\mathfrak m'_n$.
+$h(\mathfrak m_n)=\mathfrak m\prime_{n}$.
 
 **Definition 68 (Finite marked-model category).** The category
 $\mathscr P_n$ is the topological category whose objects are the finite
@@ -677,9 +677,9 @@ $\mathcal S_n(P,Q)=\Sigma^\infty_+\mathrm{Map}_{\mathscr P_n}(P,Q)$.
 associated to $\mathcal S_n$ is
 $\mathcal A_n=\mathrm{Perf}(\mathcal S_n)$, where
 $\mathrm{Perf}(\mathcal S_n)$ is the idempotent-complete stable
-subcategory of $\mathrm{Mod}_{\mathcal S_n}$ generated by the
+subcategory of $\mathrm{Mod}\kern0mu_{\mathcal S_n}$ generated by the
 representable modules. Thus $\mathcal A_n$ is an object of
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$ (Definition 36).
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$ (Definition 36).
 
 **Definition 71 (Refinement system).** A refinement system is a sequence of
 marking-preserving functors
@@ -687,11 +687,11 @@ $\rho_n:\mathscr P_n\to\mathscr P_{n+1}$ whose induced spectral functors
 $r_n:\mathcal S_n\to\mathcal S_{n+1}$ preserve perfect modules under
 extension of scalars. The resulting exact functors are
 $\rho_{n,!}(M)=M\otimes_{\mathcal S_n}\mathcal S_{n+1}$, and the associated
-stable category is $\mathcal A=\mathrm{colim}_n\mathcal A_n$ in
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$, where
-$\mathcal S_{n+1}$ is regarded as an
-$\mathcal S_n$-$\mathcal S_{n+1}$-bimodule via $r_n$. Morita compatibility is
-required.
+stable category is $\mathcal A=\mathrm{colim}\kern0mu_{n}\mathcal A_n$ in
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$, where
+$\mathcal S_{n+1}$ is regarded as a bimodule with left action by
+$\mathcal S_n$ and right action by $\mathcal S_{n+1}$ via $r_n$. Morita
+compatibility is required.
 
 **Definition 72 (Categorical renormalization).** A categorical
 renormalization is a compatible family of marking-preserving functors
@@ -754,20 +754,20 @@ Taking $E=\mathbb{K}$ uses Theorem 3. The quotient functor must identify
 boundary gluing with this cofiber.
 
 **Renormalization dynamics.** Definition 72 gives an exact endofunctor
-$R_*:\mathcal A\to\mathcal A$ and hence the motive endomorphism
-$\mathcal U_{\mathrm{loc}}(R_*)$ by Definition 43. If a periodic Pacman
-$f_*$ is represented by $\mathcal A_*$ and the encoding intertwines the two
-actions, then $R^p f_*=f_*$ implies
-$R_*^p\mathcal A_*\simeq\mathcal A_*$.
+$R_{\ast}:\mathcal A\to\mathcal A$ and hence the motive endomorphism
+$\mathcal U_{\mathrm{loc}}(R_{\ast})$ by Definition 43. If a periodic Pacman
+$f_{\ast}$ is represented by $\mathcal A_{\ast}$ and the encoding intertwines the two
+actions, then $R^p f_{\ast}=f_{\ast}$ implies
+$R_{\ast}^{p}\mathcal A_{\ast}\simeq\mathcal A_{\ast}$.
 
 **Traces.** If $\mathcal A$ is dualizable (Definition 48 and Theorem 1), the
-endomorphism $R_*$ has a trace
-$\mathrm{Tr}(R_*)\in\mathrm{Map}_{\mathrm{Mot}_{\mathrm{loc}}}(\mathbb 1,\mathbb 1)$
+endomorphism $R_{\ast}$ has a trace
+$\mathrm{Tr}(R_{\ast})\in\mathrm{Map}\kern0mu_{\mathrm{Mot}\kern0mu_{\mathrm{loc}}}(\mathbb 1,\mathbb 1)$
 in the tensor unit. Definitions 53-63 and Theorem 4 give the relative
 version. A
 comparison with rays or bubbles requires an incidence functor $\Phi$ and an
 orbit endomorphism $\mathfrak r$ with
-$\Phi\circ\mathfrak r\simeq R_*\circ\Phi$.
+$\Phi\circ\mathfrak r\simeq R_{\ast}\circ\Phi$.
 
 **Parameter neighborhoods.** A parameter realization (Definition 73) gives
 nested connected compact subsets of the Mandelbrot set. An
@@ -776,11 +776,11 @@ neighborhoods; this condition implies local connectivity of $\mathcal M$.
 The categorical construction therefore contributes to MLC only after such a
 realization has been constructed.
 
-**Scaling.** Let $D R_{f_*}$ be the derivative of analytic renormalization at
+**Scaling.** Let $D R_{f_{\ast}}$ be the derivative of analytic renormalization at
 a periodic point. If a realization
-$\mathcal L:\mathrm{Mot}_{\mathrm{loc}}\to\mathcal V$ has a
+$\mathcal L:\mathrm{Mot}\kern0mu_{\mathrm{loc}}\to\mathcal V$ has a
 finite-dimensional invariant subquotient $W$ on which
-$\mathcal L(\mathcal U_{\mathrm{loc}}(R_*))$ is conjugate to $D R_{f_*}$,
+$\mathcal L(\mathcal U_{\mathrm{loc}}(R_{\ast}))$ is conjugate to $D R_{f_{\ast}}$,
 its spectral data can be compared with the parameter sets of Definition 73.
 Recovering the golden-mean factor $\lambda^{-2}$, where
 $\lambda=(1+\sqrt 5)/2$, additionally requires diameter estimates for those
@@ -791,20 +791,20 @@ sets.
 A categorical theorem must construct Definitions 66-74 and prove that the
 refinement, renormalization, gluing, and parameter-realization maps are
 compatible. It must establish exactness and Morita invariance in
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$, the dualizability or nuclearity
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$, the dualizability or nuclearity
 conditions needed for Definitions 53-65 and Theorem 4, and the parameter
 nesting and neighborhood condition in Definition 74.
 
 ## Open problems
 
 **Open Problem 1 (Finite marked-model categories).** For each $n\geq 0$,
-define $\mathrm{Map}_{\mathscr P_n}(P,P')$ as the subspace of the
+define $\mathrm{Map}\kern0mu_{\mathscr P_n}(P,P')$ as the subspace of the
 product of mapping spaces consisting of tuples
 $(h,\widetilde h,\widehat h)$ satisfying all equations in Definition 67,
 with the product compact-open topology. Prove that these spaces have
 continuous identities and componentwise composition, that $\mathscr P_n$
 admits a small skeleton, and that
-$\mathcal S_n(P,Q)=\Sigma^\infty_+\mathrm{Map}_{\mathscr P_n}(P,Q)$ is
+$\mathcal S_n(P,Q)=\Sigma^\infty_{+}\mathrm{Map}\kern0mu_{\mathscr P_n}(P,Q)$ is
 independent up to Morita equivalence of the admissible truncation, marking, and
 representative choices.
 
@@ -821,8 +821,8 @@ $r_n:\mathcal S_n\to\mathcal S_{n+1}$, and that
 $F_n(M)=M\otimes_{\mathcal S_n}\mathcal S_{n+1}$, with its
 $r_n$-induced bimodule structure, maps perfect modules to perfect modules.
 Prove that each $F_n$ is exact, that
-$\mathcal A=\mathrm{colim}_n\mathcal A_n$ is an object of
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$, and that Morita-equivalent
+$\mathcal A=\mathrm{colim}\kern0mu_{n}\mathcal A_n$ is an object of
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$, and that Morita-equivalent
 refinement systems have equivalent colimits.
 
 **Missing from Sections V and VI.** Definitions 69-71 give the mapping-spectrum
@@ -853,11 +853,11 @@ full model and morphism data, with underlying Pacman $f$ sent to $Rf$ and a
 morphism component whose renormalized conjugacy is $\widehat h$. Prove the
 coherent natural equivalences
 $\mathfrak R_{n+1}\rho_n\simeq\rho_n\mathfrak R_n$ and prove that the
-induced endofunctor $R_*:\mathcal A\to\mathcal A$ is exact. For an analytic
-period-$p$ Pacman $f_*$, define a corresponding $\mathcal A_*$ and prove an
-equivalence $\eta:R_*^p\mathcal A_*\simeq\mathcal A_*$ satisfying
-$\eta\circ R_*^p(\alpha_*)\simeq\alpha_*\circ\eta$ for the rotation
-automorphism $\alpha_*$, with this action identified with
+induced endofunctor $R_{\ast}:\mathcal A\to\mathcal A$ is exact. For an analytic
+Pacman of period $p$, denoted $f_{\ast}$, define a corresponding $\mathcal A_{\ast}$ and prove an
+equivalence $\eta:R_{\ast}^{p}\mathcal A_{\ast}\simeq\mathcal A_{\ast}$ satisfying
+$\eta\circ R_{\ast}^{p}(\alpha_{\ast})\simeq\alpha_{\ast}\circ\eta$ for the rotation
+automorphism $\alpha_{\ast}$, with this action identified with
 $R_{\mathrm{prm}}^p$.
 
 **Missing from Sections V and VI.** Definition 72 prescribes the desired
@@ -866,12 +866,12 @@ compatibility. Section VI assumes the functors, the exact colimit endomorphism,
 and the periodic encoding.
 
 **Open Problem 5 (Parameter loci).** For every $c\in\mathcal M$ and $n\geq 0$,
-define the set $\mathscr D_n(c)$ of depth-$n$ marked Pacman data extracted
+define the set $\mathscr D_n(c)$ of depth $n$ marked Pacman data extracted
 from $p_c(z)=z^2+c$, including its domains, first-return maps, gluing map,
 and external-ray and bubble marking. Define
-$\mathrm{Real}_n(P,c)$ to mean that some element of $\mathscr D_n(c)$
+$\mathrm{Real}\kern0mu_{n}(P,c)$ to mean that some element of $\mathscr D_n(c)$
 is marked-hybrid-equivalent to $P$, and set
-$Q_n(P)=\{c\in\mathcal M:\mathrm{Real}_n(P,c)\}$. Prove that every
+$Q_n(P)=\{c\in\mathcal M:\mathrm{Real}\kern0mu_{n}(P,c)\}$. Prove that every
 $Q_n(P)$ is nonempty, compact, and connected, that marked-isomorphic models
 have equal loci, that
 $Q_{n+1}(\rho_nP)\subseteq Q_n(P)$, and that every chain
@@ -901,14 +901,14 @@ to MLC.
 **Open Problem 7 (Categorical traces).** Prove that $\mathcal A$ is smooth and
 proper by proving compactness of all mapping spectra and perfectness of the
 diagonal bimodule; equivalently, provide the duality data in
-$\mathrm{Cat}^{\mathrm{perf}}_\infty$. For each coefficient category
+$\mathrm{Cat}^{\mathrm{perf}}\kern0mu_{\infty}$. For each coefficient category
 $\mathcal E_\theta$ used in the construction, prove that the corresponding
 Ind-completed modules are dualizable and that the Ind-extended refinement and
 renormalization functors satisfy the right trace-class or nuclearity
 conditions in Definitions 53-65. Define a category $\mathcal R$ of ray-bubble
 data, an incidence functor $\Phi:\mathcal R\to\mathcal A$, and an orbit
 endomorphism $\mathfrak r:\mathcal R\to\mathcal R$ with
-$\Phi\circ\mathfrak r\simeq R_*\circ\Phi$. Show that the induced trace classes
+$\Phi\circ\mathfrak r\simeq R_{\ast}\circ\Phi$. Show that the induced trace classes
 in $K$, $\mathrm{THH}$, and $\mathrm{TC}$ are well-defined and
 prove their
 compatibility with the corresponding periodic ray and bubble-chain
@@ -922,13 +922,13 @@ traces.
 **Open Problem 8 (Scaling comparison).** Choose a linear symmetric monoidal
 category $\mathcal V$ with finite-dimensional invariant subquotients and
 eigenvalues, and define an exact symmetric monoidal functor
-$\mathcal L:\mathrm{Mot}_{\mathrm{loc}}\to\mathcal V$. Define invariant
+$\mathcal L:\mathrm{Mot}\kern0mu_{\mathrm{loc}}\to\mathcal V$. Define invariant
 finite-dimensional subquotients $W$ of
-$\mathcal L(\mathcal U_{\mathrm{loc}}(\mathcal A))$ and $W_{f_*}$ of the
-tangent representation at $f_*$, together with an isomorphism
-$\gamma:W\to W_{f_*}$ satisfying
-$\gamma\circ\mathcal L(\mathcal U_{\mathrm{loc}}(R_*))|_W=D R_{f_*}|_{W_{f_*}}\circ\gamma$. For every compatible chain
-$\rho_n(P_n)=P_{n+1}$ represented by $f_*$, prove uniform constants
+$\mathcal L(\mathcal U_{\mathrm{loc}}(\mathcal A))$ and $W_{f_{\ast}}$ of the
+tangent representation at $f_{\ast}$, together with an isomorphism
+$\gamma:W\to W_{f_{\ast}}$ satisfying
+$\gamma\circ\mathcal L(\mathcal U_{\mathrm{loc}}(R_{\ast}))\vert_W=D R_{f_{\ast}}\vert_{W_{f_{\ast}}}\circ\gamma$. For every compatible chain
+$\rho_n(P_n)=P_{n+1}$ represented by $f_{\ast}$, prove uniform constants
 $C>0$ and $0<\alpha<1$ with
 $\mathrm{diam}Q_n(P_n)\leq C\alpha^n$. In the golden-mean case, prove
 an explicit comparison theorem between the center estimate
@@ -936,7 +936,7 @@ $|c(\theta)-a_{p_n/q_n}|\asymp\lambda^{-2n}$ and the loci $Q_n(P_n)$:
 under stated hypotheses, either derive
 $\mathrm{diam}Q_n(P_n)=O(\lambda^{-2n})$ or identify the additional
 geometric estimate required for that conclusion. Finally, identify the stable
-and unstable subspaces of $D R_{f_*}$ and prove inequalities transferring
+and unstable subspaces of $D R_{f_{\ast}}$ and prove inequalities transferring
 their contraction and expansion estimates to the parameter-diameter bound.
 
 **Missing from Sections V and VI.** Section V defines neither the realization
